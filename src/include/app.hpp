@@ -8,18 +8,21 @@
 #include "utils.hpp"
 
 enum class screenState : std::uint8_t { Accueil,
-                                        Game };
+                                        Game,
+                                        Loading };
 
 class App {
 private:
-    screenState                 m_state    = screenState::Accueil;
-    int                         tailleGrid = 8;
-    std::vector<class pion>     m_pions;
-    std::vector<class tour>     m_tours;
-    std::vector<class cavalier> m_cavaliers;
-    std::vector<class fou>      m_fous;
-    std::vector<class dame>     m_dames;
-    std::vector<class roi>      m_rois;
+    screenState                    m_state    = screenState::Accueil;
+    int                            tailleGrid = 8;
+    pieceConteneur<class pion>     m_pions;
+    pieceConteneur<class tour>     m_tours;
+    pieceConteneur<class cavalier> m_cavaliers;
+    pieceConteneur<class fou>      m_fous;
+    pieceConteneur<class dame>     m_dames;
+    pieceConteneur<class roi>      m_rois;
+
+    void push_piece();
 
 public:
     explicit App(int& n)
@@ -32,7 +35,9 @@ public:
     App const& operator=(App& app);
     App        operator=(App app);
 
+    int getTailleGrid() const { return tailleGrid; }
+
     void setup_app();
     void calcul_content();
-    void draw_content() const;
+    void draw_content();
 };

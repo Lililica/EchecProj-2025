@@ -1,13 +1,14 @@
 #ifndef UTILS_HPP
 #define UTILS_HPP
 
+template<typename T>
 struct Vec2 {
-    float x;
-    float y;
+    T x;
+    T y;
 
     Vec2()
         : x(0), y(0) {}
-    Vec2(float x, float y)
+    Vec2(T x, T y)
         : x(x), y(y) {}
 
     Vec2 operator+(const Vec2& other) const
@@ -20,12 +21,12 @@ struct Vec2 {
         return {x - other.x, y - other.y};
     }
 
-    Vec2 operator*(float scalar) const
+    Vec2 operator*(T scalar) const
     {
         return {x * scalar, y * scalar};
     }
 
-    Vec2 operator/(float scalar) const
+    Vec2 operator/(T scalar) const
     {
         return {x / scalar, y / scalar};
     }
@@ -41,14 +42,15 @@ struct Vec2 {
     }
 };
 
+template<typename T>
 struct Vec3 {
-    float x;
-    float y;
-    float z;
+    T x;
+    T y;
+    T z;
 
     Vec3()
         : x(0), y(0), z(0) {}
-    Vec3(float x, float y, float z)
+    Vec3(T x, T y, T z)
         : x(x), y(y), z(z) {}
 
     Vec3 operator+(const Vec3& other) const
@@ -61,12 +63,12 @@ struct Vec3 {
         return {x - other.x, y - other.y, z - other.z};
     }
 
-    Vec3 operator*(float scalar) const
+    Vec3 operator*(T scalar) const
     {
         return {x * scalar, y * scalar, z * scalar};
     }
 
-    Vec3 operator/(float scalar) const
+    Vec3 operator/(T scalar) const
     {
         return {x / scalar, y / scalar, z / scalar};
     }
