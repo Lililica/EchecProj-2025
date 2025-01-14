@@ -1,9 +1,11 @@
+#include <quick_imgui/quick_imgui.hpp>
 #include "include/app.hpp"
 
 int main()
 {
     int taillePlateau = 8;
-    App mainApp(taillePlateau);
+    App mainApp;
+    mainApp.setTailleGrid(taillePlateau);
 
     mainApp.setup_app();
 
@@ -16,8 +18,7 @@ int main()
 
             ImGui::Begin("Echec Game");
 
-            mainApp.calcul_content();
-            mainApp.draw_content();
+            mainApp.update_app();
 
             ImGui::End();
         }
