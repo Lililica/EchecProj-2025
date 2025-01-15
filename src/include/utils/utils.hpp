@@ -1,6 +1,7 @@
 #ifndef UTILS_HPP
 #define UTILS_HPP
 
+#include <string>
 template<typename T>
 struct Vec2 {
     T x;
@@ -83,5 +84,14 @@ struct Vec3 {
         return !(*this == other);
     }
 };
+
+inline Vec3<float> from_hex_to_rgb(const std::string& hex)
+{
+    float r = std::stoul(hex.substr(1, 2), nullptr, 16) / 255.f;
+    float g = std::stoul(hex.substr(3, 2), nullptr, 16) / 255.f;
+    float b = std::stoul(hex.substr(5, 2), nullptr, 16) / 255.f;
+
+    return Vec3<float>{r, g, b};
+}
 
 #endif // UTILS_HPP

@@ -3,7 +3,7 @@
 // #include <cstdint>
 #include <cstdint>
 #include <string>
-#include "utils.hpp"
+#include "../utils/utils.hpp"
 
 enum class pieceColor : std::uint8_t { White,
                                        Black };

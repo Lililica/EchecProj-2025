@@ -1,12 +1,9 @@
 #pragma once
+#include <imgui.h>
 #include <vector>
-#include "piece.hpp"
-
-template<typename T>
-struct pieceConteneur {
-    std::vector<T> m_piecesListe;
-    int            indiceChange;
-};
+#include "../pieces/piece.hpp"
+#include "../pieces/pieceConteneur.hpp"
+#include "case.hpp"
 
 struct Board {
     int                      tailleGrid = 8;
@@ -17,7 +14,12 @@ struct Board {
     pieceConteneur<dame>     m_dames;
     pieceConteneur<roi>      m_rois;
 
+    std::vector<Case> m_cases;
+    ImFont*           fontChess = ImGui::GetIO().Fonts->AddFontFromFileTTF("assets/CHEQ_TT.TTF", 20.f);
+
     void calcul_content();
     void setup_board();
     void push_piece();
+
+    void attribute_name_to_case(Case& temp, int x, int y);
 };

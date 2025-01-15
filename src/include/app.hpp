@@ -1,7 +1,7 @@
 #pragma once
 #include <cstdint>
-#include "board.hpp"
-#include "render.hpp"
+#include "./include/board/board.hpp"
+#include "./include/render/render.hpp"
 
 enum class screenState : std::uint8_t { Accueil,
                                         Game,

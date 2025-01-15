@@ -1,8 +1,47 @@
 #include "board.hpp"
 
+void Board::attribute_name_to_case(Case& temp, int x, int y)
+{
+    temp.pieceName = m_pions.setup_piece_to_case(x, y);
+    if (temp.pieceName == "")
+        temp.pieceName = m_tours.setup_piece_to_case(x, y);
+    if (temp.pieceName == "")
+        temp.pieceName = m_cavaliers.setup_piece_to_case(x, y);
+    if (temp.pieceName == "")
+        temp.pieceName = m_fous.setup_piece_to_case(x, y);
+    if (temp.pieceName == "")
+        temp.pieceName = m_dames.setup_piece_to_case(x, y);
+    if (temp.pieceName == "")
+        temp.pieceName = m_rois.setup_piece_to_case(x, y);
+}
+
 void Board::setup_board()
 {
     push_piece();
+    for (int x{0}; x < tailleGrid; x++)
+    {
+        for (int y{0}; y < tailleGrid; y++)
+        {
+            Case temp;
+
+            attribute_name_to_case(temp, x, y);
+
+            temp.id        = (x * tailleGrid) + y;
+            temp.isOccuped = false;
+            temp.isWhite   = (x + y) % 2 == 0;
+            if (temp.isWhite)
+            {
+                temp.color       = temp.m_caseColor.colorWhiteCase;
+                temp.color_hover = temp.m_caseColor.colorWhiteCase_hover;
+            }
+            else
+            {
+                temp.color       = temp.m_caseColor.colorBlackCase;
+                temp.color_hover = temp.m_caseColor.colorBlackCase_hover;
+            }
+            m_cases.push_back(temp);
+        }
+    }
 }
 
 void Board::calcul_content()

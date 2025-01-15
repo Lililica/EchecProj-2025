@@ -1,6 +1,6 @@
 #pragma once
 
-#include "quick_imgui/quick_imgui.hpp"
+#include <imgui.h>
 
 class button {
 private:

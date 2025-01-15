@@ -1,37 +1,53 @@
 #include "render.hpp"
 #include <imgui.h>
 #include <iostream>
+#include "../board/case.hpp"
 // #include "quick_imgui/quick_imgui.hpp"
 
 void Render::draw_content(Board& board)
 {
     ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(parameter.itemSpacing, parameter.itemSpacing));
-    for (int x{0}; x < board.tailleGrid; x++)
+    for (Case& c : board.m_cases)
     {
-        for (int y{0}; y < board.tailleGrid; y++)
+        if (c.id % board.tailleGrid != 0)
+            ImGui::SameLine();
+
+        ImGui::PushID(c.id);
+
+        // Change button color
+        ImGui::PushStyleColor(ImGuiCol_Button, c.color);
+        ImGui::PushStyleColor(ImGuiCol_ButtonHovered, c.color_hover);
+
+        // ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.8f, 0.8f, 0.8f, 1.0f));
+        // ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.2f, 0.2f, 0.2f, 1.0f));
+
+        if (ImGui::Button(c.pieceName.c_str(), ImVec2{50.f, 50.f}))
         {
-            if (y != 0)
-                ImGui::SameLine();
-            parameter.foundIt = false;
-
-            check_pion(board, x, y);
-            check_tour(board, x, y);
-            check_cavalier(board, x, y);
-            check_fou(board, x, y);
-            check_dame(board, x, y);
-            check_roi(board, x, y);
-
-            if (!parameter.foundIt)
+            if (c.isActive)
             {
-                ImGui::PushID((x * board.tailleGrid) + y);
-                if (ImGui::Button(std::to_string((x * board.tailleGrid) + y).c_str(), ImVec2{50.f, 50.f}))
-                {
-                    std::cout << std::to_string((x * board.tailleGrid) + y) << "\n";
-                }
-                ImGui::PopID();
+                c.action(parameter.callAnUpdate);
             }
         }
+
+        if (parameter.callAnUpdate)
+        {
+            for (Case& c : board.m_cases)
+            {
+                c.isActive = !c.isActive;
+            }
+            parameter.callAnUpdate = false;
+        }
+
+        ImGui::PopStyleColor(2);
+
+        ImGui::PopID();
     }
+    // check_pion(temp, x, y);
+    // check_tour(temp, x, y);
+    // check_cavalier(temp, x, y);
+    // check_fou(temp, x, y);
+    // check_dame(temp, x, y);
+    // check_roi(temp, x, y);
     ImGui::PopStyleVar();
 }
 
