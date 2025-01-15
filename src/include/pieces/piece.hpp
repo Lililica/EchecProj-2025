@@ -31,40 +31,82 @@ class tour : public piece {
 private:
 protected:
 public:
-    std::string getName() const { return "Tour"; }
+    std::string getName() const
+    {
+        if (m_colorTeam == pieceColor::White)
+            return "TourW";
+        else
+            return "TourB";
+        return "Tour";
+    }
 };
 
 class cavalier : public piece {
 private:
 protected:
 public:
-    std::string getName() const { return "Cavalier"; }
+    std::string getName() const
+    {
+        if (m_colorTeam == pieceColor::White)
+            return "CavalierW";
+        else
+            return "CavalierB";
+        return "Cavalier";
+    }
 };
 
 class fou : public piece {
 private:
 protected:
 public:
-    std::string getName() const { return "Fou"; }
+    std::string getName() const
+    {
+        if (m_colorTeam == pieceColor::White)
+            return "FouW";
+        else
+            return "FouB";
+        return "Fou";
+    }
 };
 
 class dame : public piece {
 private:
 protected:
 public:
-    std::string getName() const { return "Dame"; }
+    std::string getName() const
+    {
+        if (m_colorTeam == pieceColor::White)
+            return "DameW";
+        else
+            return "DameB";
+        return "Dame";
+    }
 };
 
 class roi : public piece {
 private:
 protected:
 public:
-    std::string getName() const { return "Roi"; }
+    std::string getName() const
+    {
+        if (m_colorTeam == pieceColor::White)
+            return "RoiW";
+        else
+            return "RoiB";
+        return "Roi";
+    }
 };
 
 class pion : public piece {
 private:
 protected:
 public:
-    std::string getName() const { return "Pion"; }
+    std::string getName() const
+    {
+        if (m_colorTeam == pieceColor::White)
+            return "PionW";
+        else
+            return "PionB";
+        return "Pion";
+    }
 };

@@ -21,7 +21,7 @@ void Render::draw_content(Board& board)
         // ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.8f, 0.8f, 0.8f, 1.0f));
         // ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.2f, 0.2f, 0.2f, 1.0f));
 
-        if (ImGui::Button(c.pieceName.c_str(), ImVec2{50.f, 50.f}))
+        if (ImGui::Button(c.pieceName.c_str(), ImVec2{c.size, c.size}))
         {
             if (c.isActive)
             {

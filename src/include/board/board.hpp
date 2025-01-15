@@ -15,7 +15,6 @@ struct Board {
     pieceConteneur<roi>      m_rois;
 
     std::vector<Case> m_cases;
-    ImFont*           fontChess = ImGui::GetIO().Fonts->AddFontFromFileTTF("assets/CHEQ_TT.TTF", 20.f);
 
     void calcul_content();
     void setup_board();

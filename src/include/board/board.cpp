@@ -54,9 +54,15 @@ void Board::push_piece()
     {
         pion temp;
         if (i < tailleGrid)
+        {
             temp.setPos(Vec2<int>(i, 1));
+            temp.setColorTeam(pieceColor::White);
+        }
         else
+        {
             temp.setPos(Vec2<int>(i - tailleGrid, tailleGrid - 2));
+            temp.setColorTeam(pieceColor::Black);
+        }
         m_pions.indiceChange = tailleGrid;
         m_pions.m_piecesListe.push_back(temp);
     }
@@ -64,26 +70,44 @@ void Board::push_piece()
     {
         tour temp;
         if (i < 2)
+        {
             temp.setPos(Vec2<int>((i == 0) ? 0 : tailleGrid - 1, 0));
+            temp.setColorTeam(pieceColor::White);
+        }
         else
+        {
             temp.setPos(Vec2<int>((i == 2) ? 0 : tailleGrid - 1, tailleGrid - 1));
+            temp.setColorTeam(pieceColor::Black);
+        }
         m_tours.indiceChange = 2;
 
         m_tours.m_piecesListe.push_back(temp);
 
         cavalier temp2;
         if (i < 2)
+        {
             temp2.setPos(Vec2<int>((i == 0) ? 1 : tailleGrid - 2, 0));
+            temp2.setColorTeam(pieceColor::White);
+        }
         else
+        {
             temp2.setPos(Vec2<int>((i == 2) ? 1 : tailleGrid - 2, tailleGrid - 1));
+            temp2.setColorTeam(pieceColor::Black);
+        }
         m_cavaliers.indiceChange = 2;
         m_cavaliers.m_piecesListe.push_back(temp2);
 
         fou temp3;
         if (i < 2)
+        {
             temp3.setPos(Vec2<int>((i == 0) ? 2 : tailleGrid - 3, 0));
+            temp3.setColorTeam(pieceColor::White);
+        }
         else
+        {
             temp3.setPos(Vec2<int>((i == 2) ? 2 : tailleGrid - 3, tailleGrid - 1));
+            temp3.setColorTeam(pieceColor::Black);
+        }
         m_fous.indiceChange = 2;
         m_fous.m_piecesListe.push_back(temp3);
     }
@@ -91,17 +115,29 @@ void Board::push_piece()
     {
         dame temp;
         if (i < 1)
+        {
             temp.setPos(Vec2<int>(3, 0));
+            temp.setColorTeam(pieceColor::White);
+        }
         else
+        {
             temp.setPos(Vec2<int>(3, tailleGrid - 1));
+            temp.setColorTeam(pieceColor::Black);
+        }
         m_dames.indiceChange = 1;
         m_dames.m_piecesListe.push_back(temp);
 
         roi temp2;
         if (i < 1)
+        {
             temp2.setPos(Vec2<int>(4, 0));
+            temp2.setColorTeam(pieceColor::White);
+        }
         else
+        {
             temp2.setPos(Vec2<int>(4, tailleGrid - 1));
+            temp2.setColorTeam(pieceColor::Black);
+        }
         m_rois.indiceChange = 1;
         m_rois.m_piecesListe.push_back(temp2);
     }

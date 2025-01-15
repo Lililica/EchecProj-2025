@@ -38,6 +38,8 @@ struct Case {
     bool isWhite;
     bool isSelected = false;
 
+    float size = 80.f;
+
     CaseColorList m_caseColor;
 
     ImVec4 color;
