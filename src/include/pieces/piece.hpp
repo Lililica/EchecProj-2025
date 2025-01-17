@@ -34,9 +34,9 @@ public:
     std::string getName() const
     {
         if (m_colorTeam == pieceColor::White)
-            return "TourW";
+            return "t";
         else
-            return "TourB";
+            return "r";
         return "Tour";
     }
 };
@@ -48,9 +48,9 @@ public:
     std::string getName() const
     {
         if (m_colorTeam == pieceColor::White)
-            return "CavalierW";
+            return "j";
         else
-            return "CavalierB";
+            return "h";
         return "Cavalier";
     }
 };
@@ -62,9 +62,9 @@ public:
     std::string getName() const
     {
         if (m_colorTeam == pieceColor::White)
-            return "FouW";
+            return "n";
         else
-            return "FouB";
+            return "b";
         return "Fou";
     }
 };
@@ -76,9 +76,9 @@ public:
     std::string getName() const
     {
         if (m_colorTeam == pieceColor::White)
-            return "DameW";
+            return "l";
         else
-            return "DameB";
+            return "k";
         return "Dame";
     }
 };
@@ -90,9 +90,9 @@ public:
     std::string getName() const
     {
         if (m_colorTeam == pieceColor::White)
-            return "RoiW";
+            return "w";
         else
-            return "RoiB";
+            return "q";
         return "Roi";
     }
 };
@@ -104,9 +104,9 @@ public:
     std::string getName() const
     {
         if (m_colorTeam == pieceColor::White)
-            return "PionW";
+            return "o";
         else
-            return "PionB";
+            return "p";
         return "Pion";
     }
 };

@@ -7,6 +7,8 @@
 void Render::draw_content(Board& board)
 {
     ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(parameter.itemSpacing, parameter.itemSpacing));
+    ImGui::PushFont(board.parameter.fontChess);
+
     for (Case& c : board.m_cases)
     {
         if (c.id % board.tailleGrid != 0)
@@ -23,25 +25,27 @@ void Render::draw_content(Board& board)
 
         if (ImGui::Button(c.pieceName.c_str(), ImVec2{c.size, c.size}))
         {
-            if (c.isActive)
-            {
-                c.action(parameter.callAnUpdate);
-            }
-        }
+            board.parameter.update.callAnUpdate = c.id;
 
-        if (parameter.callAnUpdate)
-        {
-            for (Case& c : board.m_cases)
-            {
-                c.isActive = !c.isActive;
-            }
-            parameter.callAnUpdate = false;
+            // if (board.parameter.currentSelectionPiece == -1 && c.isOccuped)
+            // {
+            //     board.parameter.currentSelectionPiece = c.id;
+            //     c.isSelected                          = true;
+            //     c.action(board.parameter.callAnUpdate, board.parameter.updateList);
+            // }
+            // else if (std::find(board.parameter.updateList.begin(), board.parameter.updateList.end(), c.id) != board.parameter.updateList.end())
+            // {
+            //     board.m_cases[board.parameter.currentSelectionPiece].isSelected = false;
+            //     board.parameter.currentSelectionPiece                           = -1;
+            //     c.action(board.parameter.callAnUpdate, board.parameter.updateList);
+            // }
         }
 
         ImGui::PopStyleColor(2);
 
         ImGui::PopID();
     }
+    ImGui::PopFont();
     // check_pion(temp, x, y);
     // check_tour(temp, x, y);
     // check_cavalier(temp, x, y);

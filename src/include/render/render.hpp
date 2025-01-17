@@ -1,11 +1,12 @@
 #pragma once
 
+#include <imgui.h>
 #include "../board/board.hpp"
 #include "../pieces/piece.hpp"
 
 struct RenderParameter {
     bool  foundIt;
-    float itemSpacing  = 1.0f;
+    float itemSpacing  = 1.f;
     bool  callAnUpdate = false;
 };
 

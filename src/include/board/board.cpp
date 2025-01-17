@@ -1,4 +1,5 @@
 #include "board.hpp"
+#include <iostream>
 
 void Board::attribute_name_to_case(Case& temp, int x, int y)
 {
@@ -27,7 +28,8 @@ void Board::setup_board()
             attribute_name_to_case(temp, x, y);
 
             temp.id        = (x * tailleGrid) + y;
-            temp.isOccuped = false;
+            temp.isOccuped = temp.pieceName != "";
+            temp.isActive  = temp.isOccuped;
             temp.isWhite   = (x + y) % 2 == 0;
             if (temp.isWhite)
             {
@@ -44,9 +46,269 @@ void Board::setup_board()
     }
 }
 
+/*-----------------------------------------------------------------------------------------*/
+
+std::vector<int> give_right_id_after_selection(std::string& pieceName, int& piece_id)
+{
+    std::vector<int> updateList{piece_id};
+
+    Vec2 pos{piece_id % 8, piece_id / 8};
+
+    // Pions
+
+    if (pieceName == "o")
+    {
+        if (pos.x == 1)
+        {
+            updateList.push_back(piece_id + 1);
+            updateList.push_back(piece_id + 2);
+        }
+        else
+        {
+            updateList.push_back(piece_id + 1);
+        }
+    }
+    if (pieceName == "p")
+    {
+        if (pos.x == 6)
+        {
+            updateList.push_back(piece_id - 1);
+            updateList.push_back(piece_id - 2);
+        }
+        else
+        {
+            updateList.push_back(piece_id - 2);
+        }
+    }
+
+    // Roi
+
+    if (pieceName == "w" || pieceName == "q")
+    {
+        if (pos.x == 0)
+        {
+            updateList.push_back(piece_id + 1);
+            updateList.push_back(piece_id + 8);
+            updateList.push_back(piece_id - 8);
+            updateList.push_back(piece_id + 9);
+            updateList.push_back(piece_id - 7);
+        }
+        else if (pos.x == 7)
+        {
+            updateList.push_back(piece_id - 1);
+            updateList.push_back(piece_id + 8);
+            updateList.push_back(piece_id - 8);
+            updateList.push_back(piece_id - 9);
+            updateList.push_back(piece_id + 7);
+        }
+        else
+        {
+            updateList.push_back(piece_id + 1);
+            updateList.push_back(piece_id - 1);
+            updateList.push_back(piece_id + 8);
+            updateList.push_back(piece_id - 8);
+            updateList.push_back(piece_id + 9);
+            updateList.push_back(piece_id - 9);
+            updateList.push_back(piece_id + 7);
+            updateList.push_back(piece_id - 7);
+        }
+    }
+
+    // Dame
+
+    if (pieceName == "l" || pieceName == "k")
+    {
+        if (pos.x == 0)
+        {
+            updateList.push_back(piece_id + 1);
+            updateList.push_back(piece_id + 8);
+            updateList.push_back(piece_id - 8);
+            updateList.push_back(piece_id + 9);
+            updateList.push_back(piece_id - 7);
+        }
+        else if (pos.x == 7)
+        {
+            updateList.push_back(piece_id - 1);
+            updateList.push_back(piece_id + 8);
+            updateList.push_back(piece_id - 8);
+            updateList.push_back(piece_id - 9);
+            updateList.push_back(piece_id + 7);
+        }
+        else
+        {
+            updateList.push_back(piece_id + 1);
+            updateList.push_back(piece_id - 1);
+            updateList.push_back(piece_id + 8);
+            updateList.push_back(piece_id - 8);
+            updateList.push_back(piece_id + 9);
+            updateList.push_back(piece_id - 9);
+            updateList.push_back(piece_id + 7);
+            updateList.push_back(piece_id - 7);
+        }
+        for (int i{2}; i < 8 - pos.x; i++)
+            updateList.push_back(piece_id + i);
+        for (int i{2}; i < pos.x + 1; i++)
+            updateList.push_back(piece_id - i);
+        for (int i{2}; i < 8 - pos.y; i++)
+            updateList.push_back(piece_id + i * 8);
+        for (int i{2}; i < pos.y + 1; i++)
+            updateList.push_back(piece_id - i * 8);
+        for (int i{2}; i < ((8 - pos.y) < (8 - pos.x) ? (8 - pos.y) : (8 - pos.x)); i++)
+            updateList.push_back(piece_id + i * 9);
+        for (int i{2}; i < ((pos.y + 1 < pos.x + 1) ? pos.y + 1 : pos.x + 1); i++)
+            updateList.push_back(piece_id - i * 9);
+        for (int i{2}; i < ((8 - pos.y) < (pos.x + 1) ? (8 - pos.y) : (pos.x + 1)); i++)
+            updateList.push_back(piece_id + i * 7);
+        for (int i{2}; i < ((pos.y + 1 < 8 - pos.x) ? pos.y + 1 : 8 - pos.x); i++)
+            updateList.push_back(piece_id - i * 7);
+    }
+
+    // Fou
+
+    if (pieceName == "n" || pieceName == "b")
+    {
+        for (int i{1}; i < ((8 - pos.y) < (8 - pos.x) ? (8 - pos.y) : (8 - pos.x)); i++)
+            updateList.push_back(piece_id + i * 9);
+        for (int i{1}; i < ((pos.y + 1 < pos.x + 1) ? pos.y + 1 : pos.x + 1); i++)
+            updateList.push_back(piece_id - i * 9);
+        for (int i{1}; i < ((8 - pos.y) < (pos.x + 1) ? (8 - pos.y) : (pos.x + 1)); i++)
+            updateList.push_back(piece_id + i * 7);
+        for (int i{1}; i < ((pos.y + 1 < 8 - pos.x) ? pos.y + 1 : 8 - pos.x); i++)
+            updateList.push_back(piece_id - i * 7);
+    }
+
+    // Tour
+
+    if (pieceName == "t" || pieceName == "r")
+    {
+        for (int i{1}; i < 8 - pos.x; i++)
+            updateList.push_back(piece_id + i);
+        for (int i{1}; i < pos.x + 1; i++)
+            updateList.push_back(piece_id - i);
+        for (int i{1}; i < 8 - pos.y; i++)
+            updateList.push_back(piece_id + i * 8);
+        for (int i{1}; i < pos.y + 1; i++)
+            updateList.push_back(piece_id - i * 8);
+    }
+
+    // Cavalier
+
+    if (pieceName == "j" || pieceName == "h")
+    {
+        if (pos.x == 0)
+        {
+            updateList.push_back(piece_id - 6);
+            updateList.push_back(piece_id + 10);
+            updateList.push_back(piece_id - 15);
+            updateList.push_back(piece_id + 17);
+        }
+        else if (pos.x == 1)
+        {
+            updateList.push_back(piece_id - 6);
+            updateList.push_back(piece_id + 10);
+            updateList.push_back(piece_id - 15);
+            updateList.push_back(piece_id - 17);
+            updateList.push_back(piece_id + 15);
+            updateList.push_back(piece_id + 17);
+        }
+        else if (pos.x == 6)
+        {
+            updateList.push_back(piece_id - 10);
+            updateList.push_back(piece_id + 15);
+            updateList.push_back(piece_id - 17);
+            updateList.push_back(piece_id + 6);
+            updateList.push_back(piece_id + 17);
+            updateList.push_back(piece_id - 15);
+        }
+        else if (pos.x == 7)
+        {
+            updateList.push_back(piece_id - 10);
+            updateList.push_back(piece_id + 15);
+            updateList.push_back(piece_id - 17);
+            updateList.push_back(piece_id + 6);
+        }
+        else
+        {
+            updateList.push_back(piece_id + 6);
+            updateList.push_back(piece_id - 10);
+            updateList.push_back(piece_id + 15);
+            updateList.push_back(piece_id - 17);
+            updateList.push_back(piece_id + 10);
+            updateList.push_back(piece_id - 15);
+            updateList.push_back(piece_id + 17);
+            updateList.push_back(piece_id - 6);
+        }
+    }
+
+    return updateList;
+}
+
 void Board::calcul_content()
 {
+    if (parameter.update.callAnUpdate != -1)
+    {
+        if (parameter.update.currentSelectionPiece == -1 && m_cases[parameter.update.callAnUpdate].isActive)
+        {
+            parameter.update.currentSelectionPiece = parameter.update.callAnUpdate;
+
+            std::cout << "Call an update at piece : " << parameter.update.currentSelectionPiece << '\n';
+
+            parameter.update.updateList = give_right_id_after_selection(m_cases[parameter.update.currentSelectionPiece].pieceName, parameter.update.currentSelectionPiece);
+            for (Case& c : m_cases)
+            {
+                if (std::find(parameter.update.updateList.begin(), parameter.update.updateList.end(), c.id) != parameter.update.updateList.end())
+                {
+                    c.isActive    = true;
+                    c.color       = c.m_caseColor.colorSelection;
+                    c.color_hover = c.m_caseColor.colorSelection_hover;
+                }
+                else
+                {
+                    c.isActive = false;
+                }
+            }
+        }
+        else if (std::find(parameter.update.updateList.begin(), parameter.update.updateList.end(), parameter.update.callAnUpdate) != parameter.update.updateList.end())
+        {
+            if (parameter.update.callAnUpdate != parameter.update.currentSelectionPiece)
+            {
+                m_cases[parameter.update.callAnUpdate].pieceName = m_cases[parameter.update.currentSelectionPiece].pieceName;
+                m_cases[parameter.update.callAnUpdate].isOccuped = true;
+                m_cases[parameter.update.currentSelectionPiece].pieceName.clear();
+                m_cases[parameter.update.currentSelectionPiece].isOccuped = false;
+                parameter.update.currentSelectionPiece                    = -1;
+                std::cout << "Piece moved at : " << parameter.update.callAnUpdate << '\n';
+            }
+            else
+            {
+                parameter.update.currentSelectionPiece = -1;
+            }
+            for (Case& c : m_cases)
+            {
+                if (c.isActive)
+                {
+                    if (c.isWhite)
+                    {
+                        c.color       = c.m_caseColor.colorWhiteCase;
+                        c.color_hover = c.m_caseColor.colorWhiteCase_hover;
+                    }
+                    else
+                    {
+                        c.color       = c.m_caseColor.colorBlackCase;
+                        c.color_hover = c.m_caseColor.colorBlackCase_hover;
+                    }
+                }
+                c.isActive = c.isOccuped;
+            }
+        }
+        // {
+        // }
+
+        parameter.update.callAnUpdate = -1;
+    }
 }
+
+/*-----------------------------------------------------------------------------------------*/
 
 void Board::push_piece()
 {
