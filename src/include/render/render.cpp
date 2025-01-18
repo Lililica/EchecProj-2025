@@ -1,17 +1,16 @@
 #include "render.hpp"
 #include <imgui.h>
-#include <iostream>
 #include "../board/case.hpp"
 // #include "quick_imgui/quick_imgui.hpp"
 
-void Render::draw_content(Board& board)
+void Render::draw_content(Board& board) const
 {
     ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(parameter.itemSpacing, parameter.itemSpacing));
     ImGui::PushFont(board.parameter.fontChess);
 
     for (Case& c : board.m_cases)
     {
-        if (c.id % board.tailleGrid != 0)
+        if (c.id % board.parameter.tailleGrid != 0)
             ImGui::SameLine();
 
         ImGui::PushID(c.id);
@@ -53,112 +52,4 @@ void Render::draw_content(Board& board)
     // check_dame(temp, x, y);
     // check_roi(temp, x, y);
     ImGui::PopStyleVar();
-}
-
-void Render::check_pion(Board& board, int x, int y)
-{
-    for (pion& piece : board.m_pions.m_piecesListe)
-    {
-        if (piece.getPos() == Vec2<int>(x, y))
-        {
-            ImGui::PushID((x * board.tailleGrid) + y);
-            if (ImGui::Button(piece.getName().c_str(), ImVec2{50.f, 50.f}))
-            {
-                std::cout << std::to_string((x * board.tailleGrid) + y) << "\n";
-            }
-
-            ImGui::PopID();
-            parameter.foundIt = true;
-        }
-    }
-}
-
-void Render::check_tour(Board& board, int x, int y)
-{
-    for (tour& piece : board.m_tours.m_piecesListe)
-    {
-        if (piece.getPos() == Vec2<int>(x, y))
-        {
-            ImGui::PushID((x * board.tailleGrid) + y);
-            if (ImGui::Button(piece.getName().c_str(), ImVec2{50.f, 50.f}))
-            {
-                std::cout << std::to_string((x * board.tailleGrid) + y) << "\n";
-            }
-            ImGui::PopID();
-            parameter.foundIt = true;
-            break;
-        }
-    }
-}
-
-void Render::check_cavalier(Board& board, int x, int y)
-{
-    for (cavalier& piece : board.m_cavaliers.m_piecesListe)
-    {
-        if (piece.getPos() == Vec2<int>(x, y))
-        {
-            ImGui::PushID((x * board.tailleGrid) + y);
-            if (ImGui::Button(piece.getName().c_str(), ImVec2{50.f, 50.f}))
-            {
-                std::cout << std::to_string((x * board.tailleGrid) + y) << "\n";
-            }
-            ImGui::PopID();
-            parameter.foundIt = true;
-            break;
-        }
-    }
-}
-
-void Render::check_fou(Board& board, int x, int y)
-{
-    for (fou& piece : board.m_fous.m_piecesListe)
-    {
-        if (piece.getPos() == Vec2<int>(x, y))
-        {
-            ImGui::PushID((x * board.tailleGrid) + y);
-            if (ImGui::Button(piece.getName().c_str(), ImVec2{50.f, 50.f}))
-            {
-                std::cout << std::to_string((x * board.tailleGrid) + y) << "\n";
-            }
-            ImGui::PopID();
-            parameter.foundIt = true;
-            break;
-        }
-    }
-}
-
-void Render::check_dame(Board& board, int x, int y)
-{
-    for (dame& piece : board.m_dames.m_piecesListe)
-    {
-        if (piece.getPos() == Vec2<int>(x, y))
-        {
-            ImGui::PushID((x * board.tailleGrid) + y);
-            if (ImGui::Button(piece.getName().c_str(), ImVec2{50.f, 50.f}))
-            {
-                std::cout << std::to_string((x * board.tailleGrid) + y) << "\n";
-            }
-            ImGui::PopID();
-            parameter.foundIt = true;
-            break;
-        }
-    }
-}
-
-void Render::check_roi(Board& board, int x, int y)
-{
-    for (roi& piece : board.m_rois.m_piecesListe)
-    {
-        if (piece.getPos() == Vec2<int>(x, y))
-        {
-            ImGui::PushID((x * board.tailleGrid) + y);
-            if (ImGui::Button(piece.getName().c_str(), ImVec2{50.f, 50.f}))
-            {
-                std::cout << std::to_string((x * board.tailleGrid) + y) << "\n";
-            }
-            ImGui::PopID();
-            parameter.foundIt = true;
-            break;
-        }
-    }
 }

@@ -14,10 +14,6 @@ struct Update {
 struct BoardParameter {
     Update update;
 
-    ImFont* fontChess{};
-};
-
-struct Board {
     int                      tailleGrid = 8;
     pieceConteneur<pion>     m_pions;
     pieceConteneur<tour>     m_tours;
@@ -26,12 +22,17 @@ struct Board {
     pieceConteneur<dame>     m_dames;
     pieceConteneur<roi>      m_rois;
 
+    ImFont* fontChess{};
+};
+
+struct Board {
     std::vector<Case> m_cases;
 
     BoardParameter parameter;
 
     void calcul_content();
     void setup_board();
+    void setup_case();
     void push_piece();
 
     void attribute_name_to_case(Case& temp, int x, int y);

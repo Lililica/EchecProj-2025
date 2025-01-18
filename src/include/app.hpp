@@ -16,7 +16,7 @@ private:
     Render m_render;
 
 public:
-    void setTailleGrid(int tailleGrid) { m_board.tailleGrid = tailleGrid; }
+    void setTailleGrid(int tailleGrid) { m_board.parameter.tailleGrid = tailleGrid; }
     void setFont(ImFont* font) { m_board.parameter.fontChess = font; }
 
     void setup_app();
