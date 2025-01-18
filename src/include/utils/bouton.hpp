@@ -1,16 +1,11 @@
 #pragma once
 
 #include <imgui.h>
+#include <string>
 
-class button {
-private:
-    int    m_id;
-    ImVec4 m_color;
-
-public:
-    explicit button(int& id)
-        : m_id(id) {
-        };
-    button(button& b);
-    ~button() = default;
+struct Button {
+    std::string m_name;
+    int         m_id;
+    ImVec4      m_color;
+    std::string m_message;
 };

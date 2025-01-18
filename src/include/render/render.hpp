@@ -18,6 +18,6 @@ private:
 
 protected:
 public:
-    void draw_content(Board& board) const;
+    void draw_content_game(Board& board) const;
     void draw_piece(int x, int y, const std::vector<piece>& pieces);
 };

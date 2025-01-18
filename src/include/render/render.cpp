@@ -3,7 +3,7 @@
 #include "../board/case.hpp"
 // #include "quick_imgui/quick_imgui.hpp"
 
-void Render::draw_content(Board& board) const
+void Render::draw_content_game(Board& board) const
 {
     ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(parameter.itemSpacing, parameter.itemSpacing));
     ImGui::PushFont(board.parameter.fontChess);

@@ -3,10 +3,7 @@
 #include <cstdint>
 #include "./include/board/board.hpp"
 #include "./include/render/render.hpp"
-
-enum class screenState : std::uint8_t { Accueil,
-                                        Game,
-                                        Loading };
+#include "include/menu/menu.hpp"
 
 class App {
 private:
@@ -14,6 +11,7 @@ private:
 
     Board  m_board;
     Render m_render;
+    Menu   m_menu;
 
 public:
     void setTailleGrid(int tailleGrid) { m_board.parameter.tailleGrid = tailleGrid; }

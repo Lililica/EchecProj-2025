@@ -9,7 +9,7 @@ void Board::setup_board()
 
 /*-----------------------------------------------------------------------------------------*/
 
-void Board::calcul_content()
+void Board::calcul_content_game()
 {
     if (parameter.update.callAnUpdate != -1)
     {

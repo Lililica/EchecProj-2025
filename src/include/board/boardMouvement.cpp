@@ -1,5 +1,4 @@
 #include "boardMouvement.hpp"
-#include <iostream>
 #include "../pieces/pionUtils.hpp"
 #include "board.hpp"
 

@@ -29,9 +29,9 @@ int main()
 
             ImGui::Begin("Echec Game");
 
-            ImGui::PopFont();
-
             mainApp.update_app();
+
+            ImGui::PopFont();
 
             ImGui::End();
         }

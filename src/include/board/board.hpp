@@ -30,7 +30,7 @@ struct Board {
 
     BoardParameter parameter;
 
-    void calcul_content();
+    void calcul_content_game();
     void setup_board();
     void setup_case();
     void push_piece();
