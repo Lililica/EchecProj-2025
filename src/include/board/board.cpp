@@ -1,8 +1,10 @@
 #include "board.hpp"
 #include <iostream>
+#include "include/board/case.hpp"
 
 void Board::setup_board()
 {
+    this->parameter.isWhitePlaying = true;
     push_piece();
     setup_case();
 }
@@ -36,19 +38,6 @@ void Board::calcul_content_game()
         }
         else if (std::find(parameter.update.updateList.begin(), parameter.update.updateList.end(), parameter.update.callAnUpdate) != parameter.update.updateList.end())
         {
-            if (parameter.update.callAnUpdate != parameter.update.currentSelectionPiece)
-            {
-                m_cases[parameter.update.callAnUpdate].pieceName = m_cases[parameter.update.currentSelectionPiece].pieceName;
-                m_cases[parameter.update.callAnUpdate].isOccuped = true;
-                m_cases[parameter.update.currentSelectionPiece].pieceName.clear();
-                m_cases[parameter.update.currentSelectionPiece].isOccuped = false;
-                parameter.update.currentSelectionPiece                    = -1;
-                std::cout << "Piece moved at : " << parameter.update.callAnUpdate << '\n';
-            }
-            else
-            {
-                parameter.update.currentSelectionPiece = -1;
-            }
             for (Case& c : m_cases)
             {
                 if (c.isActive)
@@ -64,7 +53,34 @@ void Board::calcul_content_game()
                         c.color_hover = c.m_caseColor.colorBlackCase_hover;
                     }
                 }
-                c.isActive = c.isOccuped;
+            }
+            if (parameter.update.callAnUpdate != parameter.update.currentSelectionPiece)
+            {
+                m_cases[parameter.update.callAnUpdate].pieceName    = m_cases[parameter.update.currentSelectionPiece].pieceName;
+                m_cases[parameter.update.callAnUpdate].isOccuped    = true;
+                m_cases[parameter.update.callAnUpdate].isPieceWhite = true;
+                m_cases[parameter.update.currentSelectionPiece].pieceName.clear();
+                m_cases[parameter.update.currentSelectionPiece].isOccuped    = false;
+                m_cases[parameter.update.currentSelectionPiece].isPieceWhite = false;
+                parameter.update.currentSelectionPiece                       = -1;
+                std::cout << "Piece moved at : " << parameter.update.callAnUpdate << '\n';
+
+                this->parameter.isWhitePlaying = !this->parameter.isWhitePlaying;
+                for (Case& c : m_cases)
+                {
+                    if (this->parameter.isWhitePlaying)
+                    {
+                        c.isActive = c.isOccuped && c.isPieceWhite;
+                    }
+                    else
+                    {
+                        c.isActive = c.isOccuped && !c.isPieceWhite;
+                    }
+                }
+            }
+            else
+            {
+                parameter.update.currentSelectionPiece = -1;
             }
         }
         // {

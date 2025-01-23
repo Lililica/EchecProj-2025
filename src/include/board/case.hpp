@@ -35,7 +35,8 @@ struct Case {
     int id;
 
     bool isOccuped = false;
-    bool isActive  = true;
+
+    bool isActive = true;
     bool isWhite;
     bool isSelected = false;
 
@@ -48,6 +49,7 @@ struct Case {
 
     /* Piece information */
     std::string pieceName;
+    bool        isPieceWhite;
 
     void action(bool& callAnUpdate, std::vector<int>& updateList);
     void update_other_button();

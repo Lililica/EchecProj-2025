@@ -1,4 +1,5 @@
 #include "board.hpp"
+#include "include/pieces/pionUtils.hpp"
 
 void Board::attribute_name_to_case(Case& temp, int x, int y)
 {
@@ -13,6 +14,8 @@ void Board::attribute_name_to_case(Case& temp, int x, int y)
         temp.pieceName = parameter.m_dames.setup_piece_to_case(x, y);
     if (temp.pieceName == "")
         temp.pieceName = parameter.m_rois.setup_piece_to_case(x, y);
+
+    temp.isPieceWhite = (temp.pieceName != "") ? is_cavalier_white(temp.pieceName) || is_dame_white(temp.pieceName) || is_pion_white(temp.pieceName) || is_roi_white(temp.pieceName) || is_tour_white(temp.pieceName) || is_fou_white(temp.pieceName) : false;
 }
 
 void Board::setup_case()
@@ -27,8 +30,8 @@ void Board::setup_case()
 
             temp.id        = (x * parameter.tailleGrid) + y;
             temp.isOccuped = temp.pieceName != "";
-            temp.isActive  = temp.isOccuped;
             temp.isWhite   = (x + y) % 2 == 0;
+            temp.isActive  = temp.isPieceWhite;
             if (temp.isWhite)
             {
                 temp.color       = temp.m_caseColor.colorWhiteCase;

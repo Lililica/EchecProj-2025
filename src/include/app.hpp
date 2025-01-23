@@ -1,6 +1,5 @@
 #pragma once
 #include <imgui.h>
-#include <cstdint>
 #include "./include/board/board.hpp"
 #include "./include/render/render.hpp"
 #include "include/menu/menu.hpp"

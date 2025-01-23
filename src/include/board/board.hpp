@@ -22,6 +22,8 @@ struct BoardParameter {
     pieceConteneur<dame>     m_dames;
     pieceConteneur<roi>      m_rois;
 
+    bool isWhitePlaying = true;
+
     ImFont* fontChess{};
 };
 
