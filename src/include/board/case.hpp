@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include "../utils/utils.hpp"
+#include "include/pieces/piece.hpp"
 
 struct CaseColorList {
     // palette 1
@@ -32,7 +33,10 @@ struct CaseColorList {
 
 struct Case {
     /* data */
-    int id;
+    int       id;
+    Vec2<int> m_pos;
+
+    piece currentPiece;
 
     bool isOccuped = false;
     bool isActive  = true;
