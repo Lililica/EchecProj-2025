@@ -22,6 +22,14 @@ void RenderImGui::draw_content(Game& currentGame) const
 
             std::string pieceName = piece ? piece->name_for_imgui() : " ";
 
+            bool has_pushed_border = false;
+            if (currentGame.is_selected_piece() && currentGame.get_pos_selected_piece() == std::make_pair(x, y))
+            {
+                ImGui::PushStyleVar(ImGuiStyleVar_FrameBorderSize, 5.0f);
+                ImGui::PushStyleColor(ImGuiCol_Border, ImVec4(1.0f, 0.0f, 0.0f, 1.0f));
+                has_pushed_border = true;
+            }
+
             if (ImGui::Button(pieceName.c_str(), ImVec2{80., 80.}))
             {
                 if (piece && !currentGame.is_selected_piece())
@@ -32,6 +40,12 @@ void RenderImGui::draw_content(Game& currentGame) const
                 {
                     currentGame.move_piece(x, y);
                 }
+            }
+
+            if (has_pushed_border)
+            {
+                ImGui::PopStyleVar();
+                ImGui::PopStyleColor();
             }
 
             ImGui::PopFont();

@@ -48,4 +48,9 @@ public:
     bool   is_selected_piece() const { return _selectedPiece.has_value(); };
     void   move_piece(int x, int y);
     void   remove_piece(Piece* piece);
+
+    std::pair<int, int> get_pos_selected_piece() const
+    {
+        return _selectedPiece.has_value() ? _selectedPiece.value().pos : std::make_pair(-1, -1);
+    };
 };
