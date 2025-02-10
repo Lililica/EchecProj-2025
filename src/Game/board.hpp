@@ -1,7 +1,7 @@
 #pragma once
 
 struct BoardParameter {
-    int gridSize;
+    int gridSize = 8;
 };
 
 struct Board {

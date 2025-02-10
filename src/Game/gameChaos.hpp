@@ -2,6 +2,6 @@
 
 #include "game.hpp"
 
-class GameChaos : Game {
+class GameChaos : public Game {
     void game_setup() override;
 };
