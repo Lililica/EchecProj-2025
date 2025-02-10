@@ -32,10 +32,23 @@ public:
 
     void death() { _parameter.pos.reset(); };
 
-    virtual std::string name_for_imgui() const = 0;
+    virtual std::string                      name_for_imgui() const                                                = 0;
+    virtual std::vector<std::pair<int, int>> get_case_possible(std::vector<std::pair<int, int>> occuped_pos) const = 0;
 
-    PieceColor          get_color() const { return _parameter.pieceColor; };
-    std::pair<int, int> get_pos() const { return _parameter.pos.value(); };
-    void                set_pos(std::pair<int, int> pos) { _parameter.pos = pos; };
-    PieceType           get_type() const { return _parameter.pieceType; };
+    PieceColor get_color() const
+    {
+        return _parameter.pieceColor;
+    };
+    std::pair<int, int> get_pos() const
+    {
+        return _parameter.pos.value();
+    };
+    void set_pos(std::pair<int, int> pos)
+    {
+        _parameter.pos = pos;
+    };
+    PieceType get_type() const
+    {
+        return _parameter.pieceType;
+    };
 };

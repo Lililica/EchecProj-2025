@@ -1,0 +1,44 @@
+#include "pion.hpp"
+#include <vector>
+
+std::vector<std::pair<int, int>> Pion::get_case_possible(std::vector<std::pair<int, int>> occuped_pos) const
+{
+    std::pair<int, int>              pos = get_pos();
+    std::vector<std::pair<int, int>> case_possible;
+
+    if (get_color() == PieceColor::BLACK)
+    {
+        if (pos.second == 6)
+        {
+            if (std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{pos.first, pos.second - 1}) == occuped_pos.end())
+                case_possible.emplace_back(pos.first, pos.second - 1);
+
+            if (std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{pos.first, pos.second - 2}) == occuped_pos.end())
+                case_possible.emplace_back(pos.first, pos.second - 2);
+        }
+        else
+        {
+            if (std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{pos.first, pos.second - 1}) == occuped_pos.end())
+                case_possible.emplace_back(pos.first, pos.second - 1);
+        }
+    }
+    else
+    {
+        if (pos.second == 1)
+        {
+            if (std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{pos.first, pos.second + 1}) == occuped_pos.end())
+                case_possible.emplace_back(pos.first, pos.second + 1);
+            case_possible.emplace_back(pos.first, pos.second + 1);
+
+            if (std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{pos.first, pos.second + 2}) == occuped_pos.end())
+                case_possible.emplace_back(pos.first, pos.second + 2);
+        }
+        else
+        {
+            if (std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{pos.first, pos.second + 1}) == occuped_pos.end())
+                case_possible.emplace_back(pos.first, pos.second + 1);
+        }
+    }
+
+    return case_possible;
+}

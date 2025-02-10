@@ -1,5 +1,7 @@
 #include "game.hpp"
-#include <utility>
+#include <algorithm>
+#include <iostream>
+#include <vector>
 
 void Game::piece_setup()
 {
@@ -120,9 +122,16 @@ void Game::move_piece(int x, int y)
     if (!_selectedPiece.has_value())
         return;
 
+    auto possibleCase = _selectedPiece->case_possible;
+
+    if (std::find(possibleCase.begin(), possibleCase.end(), std::make_pair(x, y)) == possibleCase.end())
+    {
+        _selectedPiece.reset();
+        return;
+    }
+
     if (_selectedPiece->piece->get_pos() == std::make_pair(x, y))
     {
-        // _selectedPiece->piece = nullptr;
         _selectedPiece.reset();
         return;
     }
@@ -133,7 +142,6 @@ void Game::move_piece(int x, int y)
     {
         if (pieceSurLaCase->get_color() == _selectedPiece->piece->get_color())
         {
-            // _selectedPiece->piece = nullptr;
             _selectedPiece.reset();
             return;
         }
@@ -145,6 +153,43 @@ void Game::move_piece(int x, int y)
         pieceSurLaCase->death();
         remove_piece(pieceSurLaCase);
     }
-    // _selectedPiece->piece = nullptr;
     _selectedPiece.reset();
+}
+
+std::vector<std::pair<int, int>> Game::get_occuped_pos() const
+{
+    std::vector<std::pair<int, int>> pos;
+
+    pos.reserve(_pions.size());
+    for (const auto& pion : _pions)
+    {
+        pos.push_back(pion.get_pos());
+    }
+
+    for (const auto& tour : _tours)
+    {
+        pos.push_back(tour.get_pos());
+    }
+
+    for (const auto& fou : _fous)
+    {
+        pos.push_back(fou.get_pos());
+    }
+
+    for (const auto& cavalier : _cavaliers)
+    {
+        pos.push_back(cavalier.get_pos());
+    }
+
+    for (const auto& dame : _dames)
+    {
+        pos.push_back(dame.get_pos());
+    }
+
+    for (const auto& roi : _rois)
+    {
+        pos.push_back(roi.get_pos());
+    }
+
+    return pos;
 }

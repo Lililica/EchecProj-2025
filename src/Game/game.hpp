@@ -1,6 +1,5 @@
 #pragma once
 
-#include <memory>
 #include <optional>
 #include <utility>
 #include <vector>
@@ -17,8 +16,9 @@ struct GameParameter {
 };
 
 struct SelectedPiece {
-    std::pair<int, int> pos;
-    Piece*              piece;
+    std::pair<int, int>              pos;
+    Piece*                           piece;
+    std::vector<std::pair<int, int>> case_possible;
 };
 
 class Game {
@@ -43,11 +43,14 @@ public:
 
     void piece_setup();
 
-    Piece* get_piece(int x, int y);
-    void   select_piece(Piece* piece) { _selectedPiece = SelectedPiece{.pos = piece->get_pos(), .piece = piece}; };
-    bool   is_selected_piece() const { return _selectedPiece.has_value(); };
-    void   move_piece(int x, int y);
-    void   remove_piece(Piece* piece);
+    Piece*                           get_piece(int x, int y);
+    void                             select_piece(Piece* piece) { _selectedPiece = SelectedPiece{.pos = piece->get_pos(), .piece = piece, .case_possible = piece->get_case_possible(get_occuped_pos())}; };
+    bool                             is_selected_piece() const { return _selectedPiece.has_value(); };
+    void                             move_piece(int x, int y);
+    void                             remove_piece(Piece* piece);
+    std::vector<std::pair<int, int>> get_possible_pos() const { return _selectedPiece.has_value() ? _selectedPiece.value().case_possible : std::vector<std::pair<int, int>>{}; };
+
+    std::vector<std::pair<int, int>> get_occuped_pos() const;
 
     std::pair<int, int> get_pos_selected_piece() const
     {
