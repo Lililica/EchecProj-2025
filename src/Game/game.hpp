@@ -19,6 +19,7 @@ struct SelectedPiece {
     std::pair<int, int>              pos;
     Piece*                           piece;
     std::vector<std::pair<int, int>> case_possible;
+    std::vector<std::pair<int, int>> attack_possible;
 };
 
 class Game {
@@ -44,13 +45,14 @@ public:
     void piece_setup();
 
     Piece*                           get_piece(int x, int y);
-    void                             select_piece(Piece* piece) { _selectedPiece = SelectedPiece{.pos = piece->get_pos(), .piece = piece, .case_possible = piece->get_case_possible(get_occuped_pos())}; };
+    void                             select_piece(Piece* piece);
     bool                             is_selected_piece() const { return _selectedPiece.has_value(); };
     void                             move_piece(int x, int y);
     void                             remove_piece(Piece* piece);
     std::vector<std::pair<int, int>> get_possible_pos() const { return _selectedPiece.has_value() ? _selectedPiece.value().case_possible : std::vector<std::pair<int, int>>{}; };
+    std::vector<std::pair<int, int>> get_attack_possible() const { return _selectedPiece.has_value() ? _selectedPiece.value().attack_possible : std::vector<std::pair<int, int>>{}; };
 
-    std::vector<std::pair<int, int>> get_occuped_pos() const;
+    std::vector<std::pair<int, int>> get_occuped_pos(PieceColor color) const;
 
     std::pair<int, int> get_pos_selected_piece() const
     {

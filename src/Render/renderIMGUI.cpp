@@ -40,6 +40,13 @@ void RenderImGui::draw_content(Game& currentGame) const
                     ImGui::PushStyleColor(ImGuiCol_Border, ImVec4(0.0f, 1.0f, 0.0f, 1.0f));
                     has_pushed_border = true;
                 }
+                auto possible_attack = currentGame.get_attack_possible();
+                if (std::find(possible_attack.begin(), possible_attack.end(), std::pair<int, int>{x, y}) != possible_attack.end())
+                {
+                    ImGui::PushStyleVar(ImGuiStyleVar_FrameBorderSize, 5.0f);
+                    ImGui::PushStyleColor(ImGuiCol_Border, ImVec4(1.0f, 0.0f, 0.0f, 1.0f));
+                    has_pushed_border = true;
+                }
             }
 
             if (ImGui::Button(pieceName.c_str(), ImVec2{80., 80.}))

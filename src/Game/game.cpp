@@ -2,6 +2,17 @@
 #include <algorithm>
 #include <iostream>
 #include <vector>
+#include "Game/Piece/piece.hpp"
+
+void Game::select_piece(Piece* piece)
+{
+    SelectedPiece selectedPiece;
+    selectedPiece.pos             = piece->get_pos();
+    selectedPiece.piece           = piece;
+    selectedPiece.case_possible   = piece->get_case_possible(get_occuped_pos(PieceColor::VOID));
+    selectedPiece.attack_possible = piece->get_attack_possible(get_occuped_pos(piece->get_color() == PieceColor::WHITE ? PieceColor::BLACK : PieceColor::WHITE), get_occuped_pos(piece->get_color() == PieceColor::WHITE ? PieceColor::WHITE : PieceColor::BLACK));
+    this->_selectedPiece          = selectedPiece;
+}
 
 void Game::piece_setup()
 {
@@ -122,13 +133,16 @@ void Game::move_piece(int x, int y)
     if (!_selectedPiece.has_value())
         return;
 
+    // Verify you can go to this case
     auto possibleCase = _selectedPiece->case_possible;
 
-    if (std::find(possibleCase.begin(), possibleCase.end(), std::make_pair(x, y)) == possibleCase.end())
+    if (std::find(possibleCase.begin(), possibleCase.end(), std::make_pair(x, y)) == possibleCase.end() && std::find(_selectedPiece->attack_possible.begin(), _selectedPiece->attack_possible.end(), std::make_pair(x, y)) == _selectedPiece->attack_possible.end())
     {
         _selectedPiece.reset();
         return;
     }
+
+    // If it is the same case, unselect the piece
 
     if (_selectedPiece->piece->get_pos() == std::make_pair(x, y))
     {
@@ -145,6 +159,18 @@ void Game::move_piece(int x, int y)
             _selectedPiece.reset();
             return;
         }
+        auto possibleAttack = _selectedPiece->attack_possible;
+        if (std::find(possibleAttack.begin(), possibleAttack.end(), std::make_pair(x, y)) != possibleAttack.end())
+        {
+            _selectedPiece->piece->set_pos(std::make_pair(x, y));
+            if (pieceSurLaCase)
+            {
+                pieceSurLaCase->death();
+                remove_piece(pieceSurLaCase);
+            }
+            _selectedPiece.reset();
+            return;
+        }
     }
 
     _selectedPiece->piece->set_pos(std::make_pair(x, y));
@@ -156,40 +182,27 @@ void Game::move_piece(int x, int y)
     _selectedPiece.reset();
 }
 
-std::vector<std::pair<int, int>> Game::get_occuped_pos() const
+std::vector<std::pair<int, int>> Game::get_occuped_pos(PieceColor color) const
 {
     std::vector<std::pair<int, int>> pos;
-
     pos.reserve(_pions.size());
-    for (const auto& pion : _pions)
-    {
-        pos.push_back(pion.get_pos());
-    }
 
-    for (const auto& tour : _tours)
-    {
-        pos.push_back(tour.get_pos());
-    }
+    auto add_positions = [&pos, color](const auto& pieces) {
+        for (const auto& piece : pieces)
+        {
+            if (color == PieceColor::VOID || piece.get_color() == color)
+            {
+                pos.push_back(piece.get_pos());
+            }
+        }
+    };
 
-    for (const auto& fou : _fous)
-    {
-        pos.push_back(fou.get_pos());
-    }
-
-    for (const auto& cavalier : _cavaliers)
-    {
-        pos.push_back(cavalier.get_pos());
-    }
-
-    for (const auto& dame : _dames)
-    {
-        pos.push_back(dame.get_pos());
-    }
-
-    for (const auto& roi : _rois)
-    {
-        pos.push_back(roi.get_pos());
-    }
+    add_positions(_pions);
+    add_positions(_tours);
+    add_positions(_fous);
+    add_positions(_cavaliers);
+    add_positions(_dames);
+    add_positions(_rois);
 
     return pos;
 }
