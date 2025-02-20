@@ -43,7 +43,7 @@ std::vector<std::pair<int, int>> Pion::get_case_possible(std::vector<std::pair<i
     return case_possible;
 }
 
-std::vector<std::pair<int, int>> Pion::get_attack_possible(std::vector<std::pair<int, int>> occuped_pos_ennemi, std::vector<std::pair<int, int>> occuped_pos_ally) const
+std::vector<std::pair<int, int>> Pion::get_attack_possible(std::vector<std::pair<int, int>> occuped_pos_ennemi, std::vector<std::pair<int, int>> /*occuped_pos_ally*/) const
 {
     std::pair<int, int>              pos = get_pos();
     std::vector<std::pair<int, int>> attack_possible;

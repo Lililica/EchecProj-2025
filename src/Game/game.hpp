@@ -26,6 +26,8 @@ class Game {
 private:
     GameParameter _parameter;
     Board         _board{};
+    bool          _isWhiteTurn{true};
+    bool          _isEndGame{false};
 
     std::vector<Pion>     _pions;
     std::vector<tour>     _tours;
@@ -53,6 +55,12 @@ public:
     std::vector<std::pair<int, int>> get_attack_possible() const { return _selectedPiece.has_value() ? _selectedPiece.value().attack_possible : std::vector<std::pair<int, int>>{}; };
 
     std::vector<std::pair<int, int>> get_occuped_pos(PieceColor color) const;
+
+    bool is_white_turn() const { return _isWhiteTurn; };
+    void change_turn() { _isWhiteTurn = !_isWhiteTurn; };
+    void reset_turn() { _isWhiteTurn = true; };
+    bool get_isEndGame() const { return _isEndGame; };
+    void reset_isEndGame() { _isEndGame = false; };
 
     std::pair<int, int> get_pos_selected_piece() const
     {

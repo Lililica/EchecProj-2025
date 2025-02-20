@@ -5,6 +5,9 @@
 #include "Game/game.hpp"
 #include "Game/gameChaos.hpp"
 #include "Game/gameClassic.hpp"
+#include "Menu/MenuList/menuHome.hpp"
+#include "Menu/MenuList/menuInGame.hpp"
+#include "Menu/MenuList/menuPause.hpp"
 #include "Menu/menu.hpp"
 #include "Render/renderIMGUI.hpp"
 
@@ -17,6 +20,9 @@ struct GameDef {
 };
 
 struct MenuDef {
+    MenuHome   home;
+    MenuInGame ingame;
+    MenuPause  pause;
 };
 
 class App {
@@ -42,4 +48,6 @@ public:
     void set_chess_font(ImFont* font);
 
     // Menu
+    void setup_menu();
+    void set_menu(MenuState state);
 };

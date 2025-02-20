@@ -1,6 +1,5 @@
 #include "game.hpp"
 #include <algorithm>
-#include <iostream>
 #include <vector>
 #include "Game/Piece/piece.hpp"
 
@@ -165,20 +164,22 @@ void Game::move_piece(int x, int y)
             _selectedPiece->piece->set_pos(std::make_pair(x, y));
             if (pieceSurLaCase)
             {
+                if (pieceSurLaCase->get_type() == PieceType::ROI)
+                {
+                    this->_isEndGame = true;
+                    return;
+                }
                 pieceSurLaCase->death();
                 remove_piece(pieceSurLaCase);
             }
             _selectedPiece.reset();
+            this->change_turn();
             return;
         }
     }
 
     _selectedPiece->piece->set_pos(std::make_pair(x, y));
-    if (pieceSurLaCase)
-    {
-        pieceSurLaCase->death();
-        remove_piece(pieceSurLaCase);
-    }
+    this->change_turn();
     _selectedPiece.reset();
 }
 

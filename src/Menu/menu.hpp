@@ -1,13 +1,10 @@
 #pragma once
 
 #include <cstdint>
+#include <functional>
 #include <vector>
 #include "button.hpp"
-
-enum class MenuState : std::uint8_t { HOME,
-                                      IN_GAME,
-                                      PAUSE,
-                                      PARAMETER };
+#include "menuState.hpp"
 
 class Menu {
 private:
@@ -16,5 +13,15 @@ private:
     std::vector<Button> _buttonList;
 
 public:
+    virtual ~Menu() = default;
     void change_menu(MenuState state);
+    void draw_me();
+
+    virtual void set_button() = 0;
+    void         push_button(const Button& button) { _buttonList.push_back(button); };
+
+    // void push_button(const std::string& name, std::pair<double, double> pos, std::pair<double, double> taille) { _buttonList.emplace_back(name, pos, taille); };
+
+    MenuState get_state() const { return state; };
+    void      set_state(MenuState state) { this->state = state; };
 };

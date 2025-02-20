@@ -21,6 +21,8 @@ struct PieceParameter {
     PieceType                          pieceType;
 };
 
+class Game;
+
 class Piece {
 private:
     PieceParameter _parameter;

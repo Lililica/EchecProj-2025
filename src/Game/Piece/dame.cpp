@@ -6,86 +6,29 @@ std::vector<std::pair<int, int>> dame::get_case_possible(std::vector<std::pair<i
     std::pair<int, int>              pos = get_pos();
     std::vector<std::pair<int, int>> case_possible;
 
-    for (int i = 1; i < 8; i++)
-    {
-        if (pos.first + i < 8)
+    auto add_possible_moves = [&](int dx, int dy) {
+        for (int i = 1; i < 8; i++)
         {
-            if (std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{pos.first + i, pos.second}) == occuped_pos.end())
-                case_possible.emplace_back(pos.first + i, pos.second);
-            else
-                break;
+            int new_x = pos.first + i * dx;
+            int new_y = pos.second + i * dy;
+            if (new_x >= 0 && new_x < 8 && new_y >= 0 && new_y < 8)
+            {
+                if (std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{new_x, new_y}) == occuped_pos.end())
+                    case_possible.emplace_back(new_x, new_y);
+                else
+                    break;
+            }
         }
-    }
-    for (int i = 1; i < 8; i++)
-    {
-        if (pos.first - i >= 0)
-        {
-            if (std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{pos.first - i, pos.second}) == occuped_pos.end())
-                case_possible.emplace_back(pos.first - i, pos.second);
-            else
-                break;
-        }
-    }
-    for (int i = 1; i < 8; i++)
-    {
-        if (pos.second + i < 8)
-        {
-            if (std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{pos.first, pos.second + i}) == occuped_pos.end())
-                case_possible.emplace_back(pos.first, pos.second + i);
-            else
-                break;
-        }
-    }
-    for (int i = 1; i < 8; i++)
-    {
-        if (pos.second - i >= 0)
-        {
-            if (std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{pos.first, pos.second - i}) == occuped_pos.end())
-                case_possible.emplace_back(pos.first, pos.second - i);
-            else
-                break;
-        }
-    }
-    for (int i = 1; i < 8; i++)
-    {
-        if (pos.first + i < 8 && pos.second + i < 8)
-        {
-            if (std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{pos.first + i, pos.second + i}) == occuped_pos.end())
-                case_possible.emplace_back(pos.first + i, pos.second + i);
-            else
-                break;
-        }
-    }
-    for (int i = 1; i < 8; i++)
-    {
-        if (pos.first - i >= 0 && pos.second - i >= 0)
-        {
-            if (std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{pos.first - i, pos.second - i}) == occuped_pos.end())
-                case_possible.emplace_back(pos.first - i, pos.second - i);
-            else
-                break;
-        }
-    }
-    for (int i = 1; i < 8; i++)
-    {
-        if (pos.first + i < 8 && pos.second - i >= 0)
-        {
-            if (std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{pos.first + i, pos.second - i}) == occuped_pos.end())
-                case_possible.emplace_back(pos.first + i, pos.second - i);
-            else
-                break;
-        }
-    }
-    for (int i = 1; i < 8; i++)
-    {
-        if (pos.first - i >= 0 && pos.second + i < 8)
-        {
-            if (std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{pos.first - i, pos.second + i}) == occuped_pos.end())
-                case_possible.emplace_back(pos.first - i, pos.second + i);
-            else
-                break;
-        }
-    }
+    };
+
+    add_possible_moves(1, 0);   // Right
+    add_possible_moves(-1, 0);  // Left
+    add_possible_moves(0, 1);   // Up
+    add_possible_moves(0, -1);  // Down
+    add_possible_moves(1, 1);   // Up-Right
+    add_possible_moves(-1, -1); // Down-Left
+    add_possible_moves(1, -1);  // Down-Right
+    add_possible_moves(-1, 1);  // Up-Left
 
     return case_possible;
 }
@@ -95,118 +38,32 @@ std::vector<std::pair<int, int>> dame::get_attack_possible(std::vector<std::pair
     std::pair<int, int>              pos = get_pos();
     std::vector<std::pair<int, int>> attack_possible;
 
-    for (int i = 1; i < 8; i++)
-    {
-        if (pos.first + i < 8)
+    auto add_attack_moves = [&](int dx, int dy) {
+        for (int i = 1; i < 8; i++)
         {
-            if (std::find(occuped_pos_ally.begin(), occuped_pos_ally.end(), std::pair<int, int>{pos.first + i, pos.second}) != occuped_pos_ally.end())
-                break;
-
-            if (std::find(occuped_pos_ennemi.begin(), occuped_pos_ennemi.end(), std::pair<int, int>{pos.first + i, pos.second}) != occuped_pos_ennemi.end())
+            int new_x = pos.first + i * dx;
+            int new_y = pos.second + i * dy;
+            if (new_x >= 0 && new_x < 8 && new_y >= 0 && new_y < 8)
             {
-                attack_possible.emplace_back(pos.first + i, pos.second);
-                break;
+                if (std::find(occuped_pos_ally.begin(), occuped_pos_ally.end(), std::pair<int, int>{new_x, new_y}) != occuped_pos_ally.end())
+                    break;
+                if (std::find(occuped_pos_ennemi.begin(), occuped_pos_ennemi.end(), std::pair<int, int>{new_x, new_y}) != occuped_pos_ennemi.end())
+                {
+                    attack_possible.emplace_back(new_x, new_y);
+                    break;
+                }
             }
         }
-    }
-    for (int i = 1; i < 8; i++)
-    {
-        if (pos.first - i >= 0)
-        {
-            if (std::find(occuped_pos_ally.begin(), occuped_pos_ally.end(), std::pair<int, int>{pos.first - i, pos.second}) != occuped_pos_ally.end())
-                break;
+    };
 
-            if (std::find(occuped_pos_ennemi.begin(), occuped_pos_ennemi.end(), std::pair<int, int>{pos.first - i, pos.second}) != occuped_pos_ennemi.end())
-            {
-                attack_possible.emplace_back(pos.first - i, pos.second);
-                break;
-            }
-        }
-    }
-    for (int i = 1; i < 8; i++)
-    {
-        if (pos.second + i < 8)
-        {
-            if (std::find(occuped_pos_ally.begin(), occuped_pos_ally.end(), std::pair<int, int>{pos.first, pos.second + i}) != occuped_pos_ally.end())
-                break;
-
-            if (std::find(occuped_pos_ennemi.begin(), occuped_pos_ennemi.end(), std::pair<int, int>{pos.first, pos.second + i}) != occuped_pos_ennemi.end())
-            {
-                attack_possible.emplace_back(pos.first, pos.second + i);
-                break;
-            }
-        }
-    }
-    for (int i = 1; i < 8; i++)
-    {
-        if (pos.second - i >= 0)
-        {
-            if (std::find(occuped_pos_ally.begin(), occuped_pos_ally.end(), std::pair<int, int>{pos.first, pos.second - i}) != occuped_pos_ally.end())
-                break;
-
-            if (std::find(occuped_pos_ennemi.begin(), occuped_pos_ennemi.end(), std::pair<int, int>{pos.first, pos.second - i}) != occuped_pos_ennemi.end())
-            {
-                attack_possible.emplace_back(pos.first, pos.second - i);
-                break;
-            }
-        }
-    }
-    for (int i = 1; i < 8; i++)
-    {
-        if (pos.first + i < 8 && pos.second + i < 8)
-        {
-            if (std::find(occuped_pos_ally.begin(), occuped_pos_ally.end(), std::pair<int, int>{pos.first + i, pos.second + i}) != occuped_pos_ally.end())
-                break;
-
-            if (std::find(occuped_pos_ennemi.begin(), occuped_pos_ennemi.end(), std::pair<int, int>{pos.first + i, pos.second + i}) != occuped_pos_ennemi.end())
-            {
-                attack_possible.emplace_back(pos.first + i, pos.second + i);
-                break;
-            }
-        }
-    }
-    for (int i = 1; i < 8; i++)
-    {
-        if (pos.first - i >= 0 && pos.second - i >= 0)
-        {
-            if (std::find(occuped_pos_ally.begin(), occuped_pos_ally.end(), std::pair<int, int>{pos.first - i, pos.second - i}) != occuped_pos_ally.end())
-                break;
-
-            if (std::find(occuped_pos_ennemi.begin(), occuped_pos_ennemi.end(), std::pair<int, int>{pos.first - i, pos.second - i}) != occuped_pos_ennemi.end())
-            {
-                attack_possible.emplace_back(pos.first - i, pos.second - i);
-                break;
-            }
-        }
-    }
-    for (int i = 1; i < 8; i++)
-    {
-        if (pos.first + i < 8 && pos.second - i >= 0)
-        {
-            if (std::find(occuped_pos_ally.begin(), occuped_pos_ally.end(), std::pair<int, int>{pos.first + i, pos.second - i}) != occuped_pos_ally.end())
-                break;
-
-            if (std::find(occuped_pos_ennemi.begin(), occuped_pos_ennemi.end(), std::pair<int, int>{pos.first + i, pos.second - i}) != occuped_pos_ennemi.end())
-            {
-                attack_possible.emplace_back(pos.first + i, pos.second - i);
-                break;
-            }
-        }
-    }
-    for (int i = 1; i < 8; i++)
-    {
-        if (pos.first - i >= 0 && pos.second + i < 8)
-        {
-            if (std::find(occuped_pos_ally.begin(), occuped_pos_ally.end(), std::pair<int, int>{pos.first - i, pos.second + i}) != occuped_pos_ally.end())
-                break;
-
-            if (std::find(occuped_pos_ennemi.begin(), occuped_pos_ennemi.end(), std::pair<int, int>{pos.first - i, pos.second + i}) != occuped_pos_ennemi.end())
-            {
-                attack_possible.emplace_back(pos.first - i, pos.second + i);
-                break;
-            }
-        }
-    }
+    add_attack_moves(1, 0);   // Right
+    add_attack_moves(-1, 0);  // Left
+    add_attack_moves(0, 1);   // Up
+    add_attack_moves(0, -1);  // Down
+    add_attack_moves(1, 1);   // Up-Right
+    add_attack_moves(-1, -1); // Down-Left
+    add_attack_moves(1, -1);  // Down-Right
+    add_attack_moves(-1, 1);  // Up-Left
 
     return attack_possible;
 }
