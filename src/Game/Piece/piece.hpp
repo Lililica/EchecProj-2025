@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cstdint>
+#include <memory>
 #include <optional>
 #include <utility>
 
@@ -35,9 +36,9 @@ public:
 
     void death() { _parameter.pos.reset(); };
 
-    virtual std::string                      name_for_imgui() const                                                                                                            = 0;
-    virtual std::vector<std::pair<int, int>> get_case_possible(std::vector<std::pair<int, int>> occuped_pos) const                                                             = 0;
-    virtual std::vector<std::pair<int, int>> get_attack_possible(std::vector<std::pair<int, int>> occuped_pos_ennemi, std::vector<std::pair<int, int>> occuped_pos_ally) const = 0;
+    virtual std::string                      name_for_imgui() const                                                  = 0;
+    virtual std::vector<std::pair<int, int>> get_case_possible(std::vector<std::unique_ptr<Piece>>& _pieces) const   = 0;
+    virtual std::vector<std::pair<int, int>> get_attack_possible(std::vector<std::unique_ptr<Piece>>& _pieces) const = 0;
 
     PieceColor get_color() const
     {
@@ -56,3 +57,5 @@ public:
         return _parameter.pieceType;
     };
 };
+
+std::vector<std::pair<int, int>> get_occuped_pos(PieceColor color, const std::vector<std::unique_ptr<Piece>>& _pieces);

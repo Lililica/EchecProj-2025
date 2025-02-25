@@ -1,10 +1,12 @@
 #include "fou.hpp"
 #include <vector>
 
-std::vector<std::pair<int, int>> fou::get_case_possible(std::vector<std::pair<int, int>> occuped_pos) const
+std::vector<std::pair<int, int>> fou::get_case_possible(std::vector<std::unique_ptr<Piece>>& _pieces) const
 {
     std::pair<int, int>              pos = get_pos();
     std::vector<std::pair<int, int>> case_possible;
+
+    std::vector<std::pair<int, int>> occuped_pos = get_occuped_pos(PieceColor::VOID, _pieces);
 
     auto add_possible_moves = [&](int dx, int dy) {
         for (int i = 1; i < 8; i++)
@@ -29,10 +31,13 @@ std::vector<std::pair<int, int>> fou::get_case_possible(std::vector<std::pair<in
     return case_possible;
 }
 
-std::vector<std::pair<int, int>> fou::get_attack_possible(std::vector<std::pair<int, int>> occuped_pos_ennemi, std::vector<std::pair<int, int>> occuped_pos_ally) const
+std::vector<std::pair<int, int>> fou::get_attack_possible(std::vector<std::unique_ptr<Piece>>& _pieces) const
 {
     std::pair<int, int>              pos = get_pos();
     std::vector<std::pair<int, int>> attack_possible;
+
+    std::vector<std::pair<int, int>> occuped_pos_ennemi = get_occuped_pos(get_color() == PieceColor::WHITE ? PieceColor::BLACK : PieceColor::WHITE, _pieces);
+    std::vector<std::pair<int, int>> occuped_pos_ally   = get_occuped_pos(get_color() == PieceColor::BLACK ? PieceColor::BLACK : PieceColor::WHITE, _pieces);
 
     auto add_attack_moves = [&](int dx, int dy) {
         for (int i = 1; i < 8; i++)

@@ -1,15 +1,10 @@
 #pragma once
 
+#include <memory>
 #include <optional>
 #include <utility>
 #include <vector>
-#include "Game/Piece/cavalier.hpp"
-#include "Game/Piece/dame.hpp"
-#include "Game/Piece/fou.hpp"
 #include "Game/Piece/piece.hpp"
-#include "Game/Piece/pion.hpp"
-#include "Game/Piece/roi.hpp"
-#include "Game/Piece/tour.hpp"
 #include "board.hpp"
 
 struct GameParameter {
@@ -22,6 +17,11 @@ struct SelectedPiece {
     std::vector<std::pair<int, int>> attack_possible;
 };
 
+struct GestionEnPassant {
+    bool                _thereIsEnPassant{false};
+    std::vector<Piece*> _piecesEnPassantActive;
+};
+
 class Game {
 private:
     GameParameter _parameter;
@@ -29,12 +29,16 @@ private:
     bool          _isWhiteTurn{true};
     bool          _isEndGame{false};
 
-    std::vector<Pion>     _pions;
-    std::vector<tour>     _tours;
-    std::vector<fou>      _fous;
-    std::vector<cavalier> _cavaliers;
-    std::vector<dame>     _dames;
-    std::vector<roi>      _rois;
+    GestionEnPassant _gestionEnPassant;
+
+    std::vector<std::unique_ptr<Piece>> _pieces;
+
+    // std::vector<Pion>     _pions;
+    // std::vector<tour>     _tours;
+    // std::vector<fou>      _fous;
+    // std::vector<cavalier> _cavaliers;
+    // std::vector<dame>     _dames;
+    // std::vector<roi>      _rois;
 
     std::optional<SelectedPiece> _selectedPiece{};
 
@@ -54,7 +58,7 @@ public:
     std::vector<std::pair<int, int>> get_possible_pos() const { return _selectedPiece.has_value() ? _selectedPiece.value().case_possible : std::vector<std::pair<int, int>>{}; };
     std::vector<std::pair<int, int>> get_attack_possible() const { return _selectedPiece.has_value() ? _selectedPiece.value().attack_possible : std::vector<std::pair<int, int>>{}; };
 
-    std::vector<std::pair<int, int>> get_occuped_pos(PieceColor color) const;
+    // std::vector<std::pair<int, int>> get_occuped_pos(PieceColor color) const;
 
     bool is_white_turn() const { return _isWhiteTurn; };
     void change_turn() { _isWhiteTurn = !_isWhiteTurn; };
