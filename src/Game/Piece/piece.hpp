@@ -34,7 +34,8 @@ public:
     Piece(PieceColor color, std::pair<int, int> pos, PieceType type)
         : _parameter{.pieceColor = color, .pos = pos, .pieceType = type} {};
 
-    void death() { _parameter.pos.reset(); };
+    void   death() { _parameter.pos.reset(); };
+    Piece* get() { return this; }
 
     virtual std::string                      name_for_imgui() const                                                  = 0;
     virtual std::vector<std::pair<int, int>> get_case_possible(std::vector<std::unique_ptr<Piece>>& _pieces) const   = 0;

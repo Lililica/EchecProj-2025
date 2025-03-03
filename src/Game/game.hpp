@@ -8,6 +8,8 @@
 #include "board.hpp"
 
 struct GameParameter {
+    bool _isWhiteTurn{true};
+    bool _isEndGame{false};
 };
 
 struct SelectedPiece {
@@ -24,50 +26,45 @@ struct GestionEnPassant {
 
 class Game {
 private:
-    GameParameter _parameter;
-    Board         _board{};
-    bool          _isWhiteTurn{true};
-    bool          _isEndGame{false};
-
+    GameParameter    _parameter;
     GestionEnPassant _gestionEnPassant;
+    Board            _board{};
 
     std::vector<std::unique_ptr<Piece>> _pieces;
-
-    // std::vector<Pion>     _pions;
-    // std::vector<tour>     _tours;
-    // std::vector<fou>      _fous;
-    // std::vector<cavalier> _cavaliers;
-    // std::vector<dame>     _dames;
-    // std::vector<roi>      _rois;
 
     std::optional<SelectedPiece> _selectedPiece{};
 
 public:
-    int getGridSize() const { return _board._parameter.gridSize; };
+    /*____________________ Constructors / Destructors ____________________*/
+    virtual ~Game() = default;
 
-    virtual ~Game()           = default;
+    /*____________________ Game Gestion ____________________*/
+
     virtual void game_setup() = 0;
+    void         piece_setup();
+    void         select_piece(Piece* piece);
+    void         move_piece(int x, int y);
 
-    void piece_setup();
+    /*____________________ Inline Functions ____________________*/
 
-    Piece*                           get_piece(int x, int y);
-    void                             select_piece(Piece* piece);
+    bool                             is_white_turn() const { return _parameter._isWhiteTurn; };
+    void                             change_turn() { _parameter._isWhiteTurn = !_parameter._isWhiteTurn; };
+    void                             reset_turn() { _parameter._isWhiteTurn = true; };
+    bool                             get_isEndGame() const { return _parameter._isEndGame; };
+    void                             reset_isEndGame() { _parameter._isEndGame = false; };
+    int                              getGridSize() const { return _board._parameter.gridSize; };
     bool                             is_selected_piece() const { return _selectedPiece.has_value(); };
-    void                             move_piece(int x, int y);
-    void                             remove_piece(Piece* piece);
+    std::pair<int, int>              get_pos_selected_piece() const { return _selectedPiece.has_value() ? _selectedPiece.value().pos : std::make_pair(-1, -1); };
     std::vector<std::pair<int, int>> get_possible_pos() const { return _selectedPiece.has_value() ? _selectedPiece.value().case_possible : std::vector<std::pair<int, int>>{}; };
     std::vector<std::pair<int, int>> get_attack_possible() const { return _selectedPiece.has_value() ? _selectedPiece.value().attack_possible : std::vector<std::pair<int, int>>{}; };
 
-    // std::vector<std::pair<int, int>> get_occuped_pos(PieceColor color) const;
+    /*____________________ UTILS ____________________*/
 
-    bool is_white_turn() const { return _isWhiteTurn; };
-    void change_turn() { _isWhiteTurn = !_isWhiteTurn; };
-    void reset_turn() { _isWhiteTurn = true; };
-    bool get_isEndGame() const { return _isEndGame; };
-    void reset_isEndGame() { _isEndGame = false; };
-
-    std::pair<int, int> get_pos_selected_piece() const
-    {
-        return _selectedPiece.has_value() ? _selectedPiece.value().pos : std::make_pair(-1, -1);
-    };
+    void   remove_piece(Piece* piece);
+    bool   check_if_end_game(Piece* pieceSurLaCase);
+    Piece* get_piece(int x, int y);
+    void   reset_en_passant();
+    void   promote_pion(int x, int y);
+    void   attack_en_passant(int x, int y);
+    void   set_en_passant();
 };

@@ -1,5 +1,8 @@
 #include "roi.hpp"
+#include <iostream>
 #include <vector>
+#include "Game/Piece/piece.hpp"
+#include "Game/Piece/tour.hpp"
 
 std::vector<std::pair<int, int>> roi::get_case_possible(std::vector<std::unique_ptr<Piece>>& _pieces) const
 {
@@ -27,6 +30,92 @@ std::vector<std::pair<int, int>> roi::get_case_possible(std::vector<std::unique_
     add_case_if_valid(pos.first, pos.second + 1);
     add_case_if_valid(pos.first, pos.second - 1);
 
+    /* ROCK Part */
+
+    if (isRockPossible)
+    {
+        int nbrFreeCases = 0;
+        if (get_color() == PieceColor::WHITE)
+        {
+            /* Grand roque */
+
+            nbrFreeCases = 0;
+            nbrFreeCases += std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{1, 7}) == occuped_pos.end();
+            nbrFreeCases += std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{2, 7}) == occuped_pos.end();
+            nbrFreeCases += std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{3, 7}) == occuped_pos.end();
+
+            if (nbrFreeCases == 3)
+            {
+                for (auto& piece : _pieces)
+                {
+                    if (piece->get_pos() == std::pair<int, int>{0, 7} && piece->get_type() == PieceType::TOUR)
+                    {
+                        tour* tour = dynamic_cast<class tour*>(piece.get());
+                        if (tour->get_iCanRock())
+                            case_possible.emplace_back(2, 7);
+                    }
+                }
+            }
+
+            /* Petit roque */
+
+            nbrFreeCases = 0;
+            nbrFreeCases += std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{5, 7}) == occuped_pos.end();
+            nbrFreeCases += std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{6, 7}) == occuped_pos.end();
+            if (nbrFreeCases == 2)
+            {
+                for (auto& piece : _pieces)
+                {
+                    if (piece->get_pos() == std::pair<int, int>{7, 7} && piece->get_type() == PieceType::TOUR)
+                    {
+                        tour* tour = dynamic_cast<class tour*>(piece.get());
+                        if (tour->get_iCanRock())
+                            case_possible.emplace_back(6, 7);
+                    }
+                }
+            }
+        }
+        if (get_color() == PieceColor::BLACK)
+        {
+            /* Grand roque */
+
+            nbrFreeCases = 0;
+            nbrFreeCases += std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{1, 0}) == occuped_pos.end();
+            nbrFreeCases += std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{2, 0}) == occuped_pos.end();
+            nbrFreeCases += std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{3, 0}) == occuped_pos.end();
+
+            if (nbrFreeCases == 3)
+            {
+                for (auto& piece : _pieces)
+                {
+                    if (piece->get_pos() == std::pair<int, int>{7, 7} && piece->get_type() == PieceType::TOUR)
+                    {
+                        tour* tour = dynamic_cast<class tour*>(piece.get());
+                        if (tour->get_iCanRock())
+                            case_possible.emplace_back(2, 0);
+                    }
+                }
+            }
+
+            /* Petit roque */
+
+            nbrFreeCases = 0;
+            nbrFreeCases += std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{5, 0}) == occuped_pos.end();
+            nbrFreeCases += std::find(occuped_pos.begin(), occuped_pos.end(), std::pair<int, int>{6, 0}) == occuped_pos.end();
+            if (nbrFreeCases == 2)
+            {
+                for (auto& piece : _pieces)
+                {
+                    if (piece->get_pos() == std::pair<int, int>{7, 7} && piece->get_type() == PieceType::TOUR)
+                    {
+                        tour* tour = dynamic_cast<class tour*>(piece.get());
+                        if (tour->get_iCanRock())
+                            case_possible.emplace_back(6, 0);
+                    }
+                }
+            }
+        }
+    }
     return case_possible;
 }
 

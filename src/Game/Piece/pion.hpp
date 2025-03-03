@@ -19,7 +19,7 @@ public:
     bool get_en_passant_gauche() const { return en_passant_gauche; };
     void set_en_passant_droite(bool en_passant) { this->en_passant_gauche = en_passant; };
 
-    std::string                      name_for_imgui() const override { return get_color() == PieceColor::WHITE ? "p" : "o"; };
+    std::string                      name_for_imgui() const override { return get_color() == PieceColor::BLACK ? "p" : "o"; };
     std::vector<std::pair<int, int>> get_case_possible(std::vector<std::unique_ptr<Piece>>& _pieces) const override;
     std::vector<std::pair<int, int>> get_attack_possible(std::vector<std::unique_ptr<Piece>>& _pieces) const override;
 };
