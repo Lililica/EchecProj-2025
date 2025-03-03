@@ -6,6 +6,7 @@ add_library(quick_imgui)
 add_library(quick_imgui::quick_imgui ALIAS quick_imgui)
 target_compile_features(quick_imgui PUBLIC cxx_std_14)
 
+
 # ---Add source files---
 if(WARNINGS_AS_ERRORS_FOR_QUICK_IMGUI)
     target_include_directories(quick_imgui PUBLIC include)
@@ -41,6 +42,12 @@ add_library(glad lib/glad/src/glad.c)
 target_include_directories(glad SYSTEM PUBLIC lib/glad/include)
 target_link_libraries(quick_imgui PUBLIC glad)
 
+# ---Add glm---
+add_subdirectory(lib/glm)
+target_link_libraries(quick_imgui PUBLIC glm)
+
+
+
 # ---Add Dear ImGui---
 add_library(ImGui)
 target_sources(ImGui PRIVATE
@@ -64,3 +71,5 @@ target_sources(ImGui PRIVATE lib/imgui/backends/imgui_impl_opengl3.cpp)
 # Link to ImGui
 target_link_libraries(quick_imgui PUBLIC ImGui)
 target_include_directories(quick_imgui SYSTEM PUBLIC lib)
+
+

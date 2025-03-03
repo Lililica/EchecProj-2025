@@ -10,6 +10,7 @@
 #include "Menu/MenuList/menuPause.hpp"
 #include "Menu/menu.hpp"
 #include "Render/renderIMGUI.hpp"
+#include "Render/renderOPENGL.hpp"
 
 enum class GameMode : std::uint8_t { CLASSIC,
                                      CHAOS };
@@ -36,7 +37,8 @@ private:
     MenuDef _myMenus;
 
     // Render
-    RenderImGui _render2D;
+    RenderImGui  _render2D;
+    RenderOpenGL _render3D;
 
 public:
     // App Utils

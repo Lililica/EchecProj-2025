@@ -148,31 +148,7 @@ void Game::move_piece(int x, int y)
         set_en_passant();
 
     if (_selectedPiece->piece->get_type() == PieceType::ROI)
-    {
-        roi* roi          = dynamic_cast<class roi*>(_selectedPiece->piece);
-        bool tourAsMooved = false;
-        if (roi->get_isRockPossible())
-        {
-            if (_selectedPiece->piece->get_color() == PieceColor::WHITE)
-            {
-                if (x == 2 && y == 7)
-                    get_piece(0, 7)->set_pos(std::make_pair(3, 7));
-
-                if (x == 6 && y == 7)
-                    get_piece(7, 7)->set_pos(std::make_pair(5, 7));
-            }
-            if (_selectedPiece->piece->get_color() == PieceColor::BLACK)
-            {
-                if (x == 2 && y == 0)
-                    get_piece(0, 0)->set_pos(std::make_pair(3, 0));
-
-                if (x == 6 && y == 0)
-                    get_piece(7, 0)->set_pos(std::make_pair(5, 0));
-            }
-        }
-
-        roi->disable_isRockPossible();
-    }
+        move_if_rock(x, y);
 
     if (_selectedPiece->piece->get_type() == PieceType::TOUR)
     {

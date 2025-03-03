@@ -67,4 +67,5 @@ public:
     void   promote_pion(int x, int y);
     void   attack_en_passant(int x, int y);
     void   set_en_passant();
+    void   move_if_rock(int x, int y);
 };
