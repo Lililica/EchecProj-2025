@@ -60,6 +60,7 @@ std::vector<std::pair<int, int>> Pion::get_attack_possible(std::vector<std::uniq
             attack_possible.emplace_back(pos.first + 1, pos.second - 1);
         if (find(occuped_pos_ennemi.begin(), occuped_pos_ennemi.end(), std::pair<int, int>{pos.first - 1, pos.second - 1}) != occuped_pos_ennemi.end())
             attack_possible.emplace_back(pos.first - 1, pos.second - 1);
+
         if (get_en_passant_droite())
         {
             attack_possible.emplace_back(pos.first - 1, pos.second - 1);
@@ -75,6 +76,7 @@ std::vector<std::pair<int, int>> Pion::get_attack_possible(std::vector<std::uniq
             attack_possible.emplace_back(pos.first + 1, pos.second + 1);
         if (find(occuped_pos_ennemi.begin(), occuped_pos_ennemi.end(), std::pair<int, int>{pos.first - 1, pos.second + 1}) != occuped_pos_ennemi.end())
             attack_possible.emplace_back(pos.first - 1, pos.second + 1);
+
         if (get_en_passant_droite())
         {
             attack_possible.emplace_back(pos.first - 1, pos.second + 1);

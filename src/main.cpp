@@ -2,16 +2,24 @@
 #include <backends/imgui_impl_opengl3.h>
 #include <imgui.h>
 #include <cstddef>
+#include <iostream>
 #include <quick_imgui/quick_imgui.hpp>
+#include "MyLibs/glimac/FilePath.hpp"
+#include "MyLibs/glimac/Program.hpp"
+#include "MyLibs/glimac/Sphere.hpp"
+#include "MyLibs/glimac/common.hpp"
 #include "app.hpp"
+#include "glm/ext/matrix_transform.hpp"
+#include "glm/fwd.hpp"
 
 #define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
 #include <glad/glad.h>
-#include <tinyobj/tiny_obj_loader.h>
-#include <glimac/glimac/FilePath.hpp>
-#include <glimac/glimac/Program.hpp>
 #include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include "MyLibs/ObjLoader/objloader.hpp"
+#include "shaders/ShaderReader.hpp"
 
 // int main()
 // {
@@ -119,44 +127,103 @@ int main(int argc, char** argv)
      * HERE SHOULD COME THE INITIALIZATION CODE
      *********************************/
 
-    App mainApp{};
+    /* ________________________________________________________________________ */
 
-    ImGui::CreateContext();
-    ImGuiIO& io = ImGui::GetIO();
+    /* Load the shader program */
 
-    mainApp.set_chess_font(io.Fonts->AddFontFromFileTTF("/Users/lililica/Documents/IMAC/Semestre4/EchecProj-2025/assets/CHEQ_TT.TTF", 50.f));
+    glimac::FilePath applicationPath(argv[0]);
+    glimac::Program  program =
+        glimac::loadProgram("/Users/lililica/Documents/IMAC/Semestre4/EchecProj-2025/src/shaders/triangle.vs.glsl", "/Users/lililica/Documents/IMAC/Semestre4/EchecProj-2025/src/shaders/shader.fs.glsl");
+    program.use();
 
-    mainApp.setup_app();
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glEnable(GL_DEPTH);
 
-    ImFont* basicFont = io.Fonts->AddFontDefault();
+    // std::string pathTest = "/Users/lililica/Documents/IMAC/Semestre4/EchecProj-2025/assets/Car.obj";
+    // objLoader.add_path(pathTest);
+    // std::vector<GLfloat> vertices = objLoader.loaderObj();
 
-    ImGui_ImplGlfw_InitForOpenGL(window, true);
-    ImGui_ImplOpenGL3_Init("#version 330");
+    glimac::Sphere sphere(1, 32, 16);
+
+    GLuint VBO = 0;
+    glGenBuffers(1, &VBO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(glimac::ShapeVertex) * sphere.getVertexCount(), sphere.getDataPointer(), GL_STATIC_DRAW);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+    GLuint VAO = 0;
+    glGenVertexArrays(1, &VAO);
+    glBindVertexArray(VAO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(glm::vec3), (void*)0);
+    glEnableVertexAttribArray(0);
+
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(glm::vec3), (void*)(3 * sizeof(float)));
+    glEnableVertexAttribArray(1);
+
+    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(glm::vec2), (void*)(6 * sizeof(float)));
+    glEnableVertexAttribArray(2);
+
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
+
+    glm::mat4 ProjMatrix   = glm::perspective(glm::radians(70.f), 1.f, 0.1f, 100.f);
+    glm::mat4 MVMatrix     = glm::translate(ProjMatrix, glm::vec3(0.f, 0.f, -5.f));
+    glm::mat4 NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
+    glm::mat4 MVP          = ProjMatrix * MVMatrix;
+
+    /* ________________________________________________________________________ */
+
+    // App mainApp{};
+
+    // ImGui::CreateContext();
+    // ImGuiIO& io = ImGui::GetIO();
+
+    // mainApp.set_chess_font(io.Fonts->AddFontFromFileTTF("/Users/lililica/Documents/IMAC/Semestre4/EchecProj-2025/assets/CHEQ_TT.TTF", 50.f));
+
+    // mainApp.setup_app();
+
+    // ImFont* basicFont = io.Fonts->AddFontDefault();
+
+    // ImGui_ImplGlfw_InitForOpenGL(window, true);
+    // ImGui_ImplOpenGL3_Init("#version 330");
 
     /* Loop until the user closes the window */
+
     while (!glfwWindowShouldClose(window))
     {
         glClearColor(1.f, 0.5f, 0.5f, 1.f);
-        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         /*********************************
          * HERE SHOULD COME THE RENDERING CODE
          *********************************/
 
-        ImGui_ImplGlfw_NewFrame();
-        ImGui_ImplOpenGL3_NewFrame();
-        ImGui::NewFrame();
+        glUniformMatrix4fv(glGetUniformLocation(program.getGLId(), "uMVPMatrix"), 1, GL_FALSE, glm::value_ptr(MVP));
+        glUniformMatrix4fv(glGetUniformLocation(program.getGLId(), "uMVMatrix"), 1, GL_FALSE, glm::value_ptr(MVMatrix));
+        glUniformMatrix4fv(glGetUniformLocation(program.getGLId(), "uNormalMatrix"), 1, GL_FALSE, glm::value_ptr(NormalMatrix));
 
-        ImGui::PushFont(basicFont);
-        ImGui::Begin("Echec Game");
+        glBindVertexArray(VAO);
+        glDrawArrays(GL_TRIANGLES, 0, sphere.getVertexCount());
+        glBindVertexArray(0);
 
-        mainApp.update_app();
+        // ImGui_ImplGlfw_NewFrame();
+        // ImGui_ImplOpenGL3_NewFrame();
+        // ImGui::NewFrame();
 
-        ImGui::PopFont();
+        // ImGui::PushFont(basicFont);
+        // ImGui::Begin("Echec Game");
 
-        ImGui::End();
+        // mainApp.update_app();
 
-        ImGui::Render();
-        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+        // ImGui::PopFont();
+
+        // ImGui::End();
+
+        // ImGui::Render();
+        // ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
         /* Swap front and back buffers */
         glfwSwapBuffers(window);
@@ -164,9 +231,9 @@ int main(int argc, char** argv)
         glfwPollEvents();
     }
 
-    ImGui_ImplGlfw_Shutdown();
-    ImGui_ImplOpenGL3_Shutdown();
-    ImGui::DestroyContext();
+    // ImGui_ImplGlfw_Shutdown();
+    // ImGui_ImplOpenGL3_Shutdown();
+    // ImGui::DestroyContext();
 
     glfwTerminate();
     return 0;
