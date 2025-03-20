@@ -6,7 +6,6 @@
 #include <string>
 #include <vector>
 #include "MyLibs/OpenGLutils/ObjLoader/objloader.hpp"
-#include "MyLibs/glimac/common.hpp"
 
 class VAO {
 private:
@@ -15,7 +14,14 @@ private:
 
 public:
     VAO() = default;
-    VAO(const std::string& path)
+
+    ~VAO()
+    {
+        glDeleteVertexArrays(1, &vao);
+        std::cout << "VAO deleted" << '\n';
+    };
+
+    void init_vao(const std::string& path)
     {
         ObjLoader           objLoader(path);
         std::vector<Vertex> vertices = objLoader.loaderObj();
@@ -23,7 +29,7 @@ public:
         GLuint VBO = 0;
         glGenBuffers(1, &VBO);
         glBindBuffer(GL_ARRAY_BUFFER, VBO);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(Vertex) * vertices.size(), &vertices[0], GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(Vertex) * vertices.size(), vertices.data(), GL_STATIC_DRAW);
         glBindBuffer(GL_ARRAY_BUFFER, 0);
 
         glGenVertexArrays(1, &this->vao);
@@ -43,11 +49,7 @@ public:
         glBindVertexArray(0);
 
         this->size = vertices.size();
-    };
-    ~VAO()
-    {
-        glDeleteVertexArrays(1, &vao);
-    };
+    }
 
     GLuint getGLuint() const { return vao; }
     size_t getSize() const { return size; }

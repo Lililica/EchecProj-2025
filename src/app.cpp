@@ -26,7 +26,6 @@ void App::update_app()
         }
         this->_render2D.draw_content(*this->_currentGame);
     }
-    this->_render3D.draw_content(0, nullptr);
 }
 
 void App::select_game(GameMode mode)

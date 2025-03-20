@@ -10,13 +10,15 @@ private:
     Texture texture;
 
 public:
-    Object(std::string const& path_texture, std::string const& path_obj)
-    {
-        vao     = VAO(path_obj);
-        texture = Texture(path_texture);
-    };
+    Object()  = default;
     ~Object() = default;
 
-    VAO     getVAO() { return vao; }
-    Texture getTexture() { return texture; }
+    VAO*     getVAO() { return &vao; }
+    Texture* getTexture() { return &texture; }
+
+    void obj_loader(std::string const& path_texture, std::string const& path_obj)
+    {
+        vao.init_vao(path_obj);
+        texture = Texture(path_texture);
+    }
 };

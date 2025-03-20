@@ -52,4 +52,8 @@ public:
     // Menu
     void setup_menu();
     void set_menu(MenuState state);
+
+    // Render
+    RenderImGui*  getRender2D() { return &_render2D; }
+    RenderOpenGL* getRender3D() { return &_render3D; }
 };
