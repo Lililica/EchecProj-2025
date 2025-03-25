@@ -13,6 +13,7 @@ private:
 
 public:
     ImFont* ChessFont{};
+    ImFont* DefaultFont{};
 
     void draw_content(Game& currentGame) const;
 };

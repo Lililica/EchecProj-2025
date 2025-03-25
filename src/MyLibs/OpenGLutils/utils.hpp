@@ -3,16 +3,16 @@
 #include <glad/glad.h>
 #include <glfw/src/internal.h>
 #include "../../shaders/ShaderReader.hpp"
-
-static int const WINDOW_WIDTH  = 800;
-static int const WINDOW_HEIGHT = 800;
+#include "GLFW/glfw3.h"
+#include "Render/TrackBall.hpp"
+#include "callback.hpp"
 
 class OpenGL_Manager {
 private:
     GLFWwindow*   window;
     ShaderLoader* shaderLoader;
-    int           width  = 0;
-    int           height = 0;
+    int           width  = 800;
+    int           height = 800;
 
 public:
     GLFWwindow*   getWindow() { return window; }
@@ -34,21 +34,7 @@ public:
     void OpenGL_init();
     void ImGui_init();
 
-    static void key_callback(GLFWwindow* window, int key, int /*scancode*/, int action, int /*mods*/)
-    {
-        if (key == GLFW_KEY_A && action == GLFW_PRESS)
-            glfwSetWindowShouldClose(window, GLFW_TRUE);
-    }
+    /* ________________________________________ */
 
-    static void mouse_button_callback(GLFWwindow* /*window*/, int /*button*/, int /*action*/, int /*mods*/) {}
-
-    static void scroll_callback(GLFWwindow* /*window*/, double /*xoffset*/, double /*yoffset*/) {}
-
-    static void cursor_position_callback(GLFWwindow* /*window*/, double /*xpos*/, double /*ypos*/) {}
-
-    static void size_callback(GLFWwindow* /*window*/, int width, int height)
-    {
-        width  = WINDOW_WIDTH;
-        height = WINDOW_HEIGHT;
-    }
+    /* ________________________________________ */
 };

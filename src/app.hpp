@@ -45,6 +45,9 @@ public:
     void setup_app();
     void update_app();
 
+    void loop_imgui();
+    void loop_opengl();
+
     // Game
     void select_game(GameMode mode);
     void set_chess_font(ImFont* font);
@@ -54,6 +57,7 @@ public:
     void set_menu(MenuState state);
 
     // Render
-    RenderImGui*  getRender2D() { return &_render2D; }
-    RenderOpenGL* getRender3D() { return &_render3D; }
+    RenderImGui*    getRender2D() { return &_render2D; }
+    RenderOpenGL*   getRender3D() { return &_render3D; }
+    OpenGL_Manager* getManager() { return _render3D.getManager(); }
 };

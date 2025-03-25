@@ -1,4 +1,6 @@
 #include "app.hpp"
+#include <backends/imgui_impl_glfw.h>
+#include <backends/imgui_impl_opengl3.h>
 #include "Game/board.hpp"
 #include "Game/game.hpp"
 #include "Render/renderIMGUI.hpp"
@@ -38,7 +40,8 @@ void App::select_game(GameMode mode)
 
 void App::set_chess_font(ImFont* font)
 {
-    this->_render2D.ChessFont = font;
+    this->_render2D.ChessFont   = font;
+    this->_render2D.DefaultFont = ImGui::GetIO().Fonts->AddFontDefault();
 }
 
 void App::set_menu(MenuState state)
@@ -49,4 +52,33 @@ void App::set_menu(MenuState state)
         this->_currentMenu = &this->_myMenus.ingame;
     if (state == MenuState::PAUSE)
         this->_currentMenu = &this->_myMenus.pause;
+}
+
+void App::loop_imgui()
+{
+    ImGui_ImplGlfw_NewFrame();
+    ImGui_ImplOpenGL3_NewFrame();
+    ImGui::NewFrame();
+    ImGui::DockSpaceOverViewport(ImGui::GetMainViewport(), ImGuiDockNodeFlags_PassthruCentralNode);
+
+    ImGui::PushFont(this->_render2D.DefaultFont);
+    ImGui::Begin("Echec Game");
+
+    update_app();
+
+    ImGui::PopFont();
+
+    ImGui::End();
+
+    ImGui::Render();
+    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+}
+
+void App::loop_opengl()
+{
+    glClearColor(1.f, 0.5f, 0.5f, 1.f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    // make the whole screen dockable
+
+    this->_render3D.draw_content();
 }

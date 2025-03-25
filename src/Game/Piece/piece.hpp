@@ -9,12 +9,12 @@ enum class PieceColor : std::uint8_t { WHITE,
                                        BLACK,
                                        VOID };
 
-enum class PieceType : std::uint8_t { PION,
-                                      TOUR,
-                                      FOU,
-                                      CAVALIER,
-                                      DAME,
-                                      ROI };
+enum PieceType { PION,
+                 TOUR,
+                 FOU,
+                 CAVALIER,
+                 DAME,
+                 ROI };
 
 struct PieceParameter {
     PieceColor                         pieceColor;
