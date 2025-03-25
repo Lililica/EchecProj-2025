@@ -48,7 +48,7 @@ void RenderImGui::draw_content(Game& currentGame) const
                 }
             }
 
-            if (ImGui::Button(pieceName.c_str(), ImVec2{80., 80.}))
+            if (ImGui::Button(pieceName.c_str(), ImVec2{parameter.tailleCase, parameter.tailleCase}))
             {
                 if (piece && !currentGame.is_selected_piece() && piece->get_color() == (currentGame.is_white_turn() ? PieceColor::WHITE : PieceColor::BLACK))
                 {

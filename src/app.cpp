@@ -80,5 +80,5 @@ void App::loop_opengl()
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     // make the whole screen dockable
 
-    this->_render3D.draw_content();
+    this->_render3D.draw_content(this->_currentGame);
 }

@@ -4,7 +4,9 @@
 #include "Game/game.hpp"
 
 struct RenderParameter {
-    float spaceCase = 2;
+    float spaceCase         = 1;
+    float tailleCase        = 40;
+    float taillePoliceChess = 50;
 };
 
 class RenderImGui {

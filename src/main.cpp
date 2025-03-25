@@ -47,7 +47,7 @@ int main(int argc, char** argv)
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO();
 
-    mainApp.set_chess_font(io.Fonts->AddFontFromFileTTF("/Users/lililica/Documents/IMAC/Semestre4/EchecProj-2025/assets/font/CHEQ_TT.TTF", 50.f));
+    mainApp.set_chess_font(io.Fonts->AddFontFromFileTTF("/Users/lililica/Documents/IMAC/Semestre4/EchecProj-2025/assets/font/CHEQ_TT.TTF", 30.f));
 
     mainApp.setup_app();
 
