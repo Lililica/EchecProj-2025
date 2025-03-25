@@ -10,15 +10,12 @@
 #include <quick_imgui/quick_imgui.hpp>
 #include "MyLibs/glimac/FilePath.hpp"
 #include "app.hpp"
-#include "glm/ext/matrix_transform.hpp"
-#include "glm/fwd.hpp"
 
 #define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-#include "Render/TrackBall.hpp"
 
 int main(int argc, char** argv)
 {

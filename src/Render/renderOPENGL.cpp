@@ -1,6 +1,4 @@
 #include "renderOPENGL.hpp"
-#include "Game/Piece/cavalier.hpp"
-#include "MyLibs/OpenGLutils/ObjLoader/objloader.hpp"
 #include "glm/ext/matrix_clip_space.hpp"
 #include "glm/ext/matrix_transform.hpp"
 #include "glm/fwd.hpp"
@@ -9,7 +7,6 @@
 #include <GLFW/glfw3.h>
 #include <glad/glad.h>
 #include <glm/glm.hpp>
-#include <numbers>
 #include "../Game/Piece/piece.hpp"
 #include "../Game/game.hpp"
 

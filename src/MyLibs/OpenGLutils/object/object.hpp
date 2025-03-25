@@ -1,6 +1,5 @@
 #pragma once
 #include <string>
-#include "glm/ext/vector_float2.hpp"
 #include "texture.hpp"
 #include "vertexUtils.hpp"
 

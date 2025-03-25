@@ -1,7 +1,6 @@
 #include "app.hpp"
 #include <backends/imgui_impl_glfw.h>
 #include <backends/imgui_impl_opengl3.h>
-#include "Game/board.hpp"
 #include "Game/game.hpp"
 #include "Render/renderIMGUI.hpp"
 
