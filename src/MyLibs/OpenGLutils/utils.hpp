@@ -2,10 +2,8 @@
 
 #include <glad/glad.h>
 #include <glfw/src/internal.h>
-#include <vector>
 #include "../../shaders/ShaderReader.hpp"
 #include "GLFW/glfw3.h"
-#include "Render/TrackBall.hpp"
 #include "callback.hpp"
 
 class OpenGL_Manager {

@@ -60,4 +60,6 @@ public:
     RenderImGui*    getRender2D() { return &_render2D; }
     RenderOpenGL*   getRender3D() { return &_render3D; }
     OpenGL_Manager* getManager() { return _render3D.getManager(); }
+    void            imgui_pre_render();
+    void            imgui_render();
 };
