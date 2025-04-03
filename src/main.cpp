@@ -30,8 +30,9 @@ int main(int argc, char** argv)
 
     ShaderLoader shaderLoader;
     manager->setShaderLoader(&shaderLoader);
-    glimac::FilePath applicationPath(argv[0]);
+    // glimac::FilePath applicationPath(argv[0]);
     manager->getShaderLoader()->loadShaders("/Users/lililica/Documents/IMAC/Semestre4/EchecProj-2025/src/shaders/triangle.vs.glsl", "/Users/lililica/Documents/IMAC/Semestre4/EchecProj-2025/src/shaders/shader.fs.glsl");
+    manager->getShaderLoader()->getProgram()->use();
 
     /* Her we have texture and objects loading */
 
@@ -57,9 +58,8 @@ int main(int argc, char** argv)
     while (!glfwWindowShouldClose(manager->getWindow()))
     {
         /* Render here */
-        mainApp.loop_opengl();
 
-        mainApp.loop_imgui();
+        mainApp.update_app();
 
         /* Swap front and back buffers */
         glfwSwapBuffers(manager->getWindow());

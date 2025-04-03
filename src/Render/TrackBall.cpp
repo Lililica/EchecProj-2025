@@ -8,3 +8,10 @@ glm::mat4 TrackballCamera::getViewMatrix() const
     viewMatrix           = glm::rotate(viewMatrix, glm::radians(m_fAngleY), glm::vec3(0.f, 1.f, 0.f));
     return viewMatrix;
 }
+
+glm::vec3 TrackballCamera::getPosition() const
+{
+    glm::mat4 viewMatrix = getViewMatrix();
+    glm::vec4 position   = glm::inverse(viewMatrix) * glm::vec4(0.f, 0.f, 0.f, 1.f);
+    return glm::vec3(position.x, position.y, position.z);
+}

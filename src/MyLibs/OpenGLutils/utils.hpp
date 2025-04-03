@@ -2,6 +2,7 @@
 
 #include <glad/glad.h>
 #include <glfw/src/internal.h>
+#include <vector>
 #include "../../shaders/ShaderReader.hpp"
 #include "GLFW/glfw3.h"
 #include "Render/TrackBall.hpp"
@@ -9,16 +10,19 @@
 
 class OpenGL_Manager {
 private:
-    GLFWwindow*   window;
+    GLFWwindow* window;
+
     ShaderLoader* shaderLoader;
-    int           width  = 800;
-    int           height = 800;
+
+    int width  = WINDOW_WIDTH;
+    int height = WINDOW_HEIGHT;
 
 public:
     GLFWwindow*   getWindow() { return window; }
     ShaderLoader* getShaderLoader() { return shaderLoader; }
 
     void setWindow(GLFWwindow* w) { window = w; }
+
     void setShaderLoader(ShaderLoader* s) { shaderLoader = s; }
 
     void update_window_size()

@@ -14,19 +14,9 @@ void App::setup_app()
 
 void App::update_app()
 {
-    if (this->_currentMenu->get_state() == MenuState::HOME)
-    {
-        this->_currentMenu->draw_me();
-    }
-    if (this->_currentMenu->get_state() == MenuState::IN_GAME)
-    {
-        if (this->_currentGame->get_isEndGame())
-        {
-            this->_currentMenu->set_state(MenuState::HOME);
-            this->_currentGame->game_setup();
-        }
-        this->_render2D.draw_content(*this->_currentGame);
-    }
+    loop_opengl();
+
+    loop_imgui();
 }
 
 void App::select_game(GameMode mode)
@@ -63,7 +53,19 @@ void App::loop_imgui()
     ImGui::PushFont(this->_render2D.DefaultFont);
     ImGui::Begin("Echec Game");
 
-    update_app();
+    if (this->_currentMenu->get_state() == MenuState::HOME)
+    {
+        this->_currentMenu->draw_me();
+    }
+    if (this->_currentMenu->get_state() == MenuState::IN_GAME)
+    {
+        if (this->_currentGame->get_isEndGame())
+        {
+            this->_currentMenu->set_state(MenuState::HOME);
+            this->_currentGame->game_setup();
+        }
+        this->_render2D.draw_content(*this->_currentGame);
+    }
 
     ImGui::PopFont();
 
@@ -75,9 +77,8 @@ void App::loop_imgui()
 
 void App::loop_opengl()
 {
-    glClearColor(1.f, 0.5f, 0.5f, 1.f);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    // make the whole screen dockable
-
-    this->_render3D.draw_content(this->_currentGame);
+    if (this->_currentMenu->get_state() == MenuState::IN_GAME)
+    {
+        this->_render3D.draw_content(this->_currentGame);
+    }
 }

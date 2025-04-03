@@ -2,8 +2,8 @@
 
 #include "GLFW/glfw3.h"
 
-static int const WINDOW_WIDTH  = 800;
-static int const WINDOW_HEIGHT = 800;
+static int const WINDOW_WIDTH  = 2000;
+static int const WINDOW_HEIGHT = 2000;
 
 inline void key_callback(GLFWwindow* window, int key, int /*scancode*/, int action, int /*mods*/)
 {

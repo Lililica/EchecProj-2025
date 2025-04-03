@@ -9,11 +9,13 @@ layout(location = 2) in vec2 aVertexTexCoords; // Coordonnées de texture du som
 uniform mat4 uMVPMatrix;
 uniform mat4 uMVMatrix;
 uniform mat4 uNormalMatrix;
+uniform vec4 uColor;
 
 // Sorties du shader
 out vec3 vPosition_vs; // Position du sommet transformé dans l'espace View
 out vec3 vNormal_vs; // Normale du sommet transformé dans l'espace View
 out vec2 vTexCoords; // Coordonnées de texture du sommet
+out vec4 vColor_vs; // Couleur du sommet
 
 void main() {
     // Passage en coordonnées homogènes
@@ -24,6 +26,7 @@ void main() {
     vPosition_vs = vec3(uMVMatrix * vertexPosition);
     vNormal_vs = vec3(uNormalMatrix * vertexNormal);
     vTexCoords = aVertexTexCoords;
+    vColor_vs = uColor;
 
     // Calcul de la position projetée
     gl_Position = uMVPMatrix * vertexPosition;
