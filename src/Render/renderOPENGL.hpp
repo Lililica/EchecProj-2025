@@ -5,10 +5,12 @@
 #include "MyLibs/OpenGLutils/object/object.hpp"
 #include "MyLibs/OpenGLutils/utils.hpp"
 #include "Render/TrackBall.hpp"
+#include "Render/mouseCasting.hpp"
 
 struct GameDisplayInformation {
-    float taille     = 150.f;
-    float tailleCase = float(taille) / 8;
+    float taille         = 150.f;
+    float rapportHauteur = -0.1f;
+    float tailleCase     = float(taille) / 8;
 
     float scaleCase  = 9.f;
     float scalePiece = 0.3f;
@@ -27,8 +29,10 @@ private:
     glm::mat4 MVMatrix;
     glm::mat4 NormalMatrix;
     glm::mat4 MVP;
+    glm::vec4 Color{1.f, 0.f, 0.f, 1.f};
 
     TrackballCamera trackball{200, 45., 90.};
+    MouseInfo       mouse;
 
     GameDisplayInformation plateau;
 

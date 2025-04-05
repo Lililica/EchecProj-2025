@@ -19,4 +19,5 @@ public:
     void rotateUp(float degrees) { m_fAngleX += degrees; }
 
     glm::mat4 getViewMatrix() const;
+    glm::vec3 getPosition() const;
 };
