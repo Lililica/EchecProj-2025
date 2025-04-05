@@ -40,6 +40,7 @@ int main(int argc, char** argv)
     mainApp.getRender3D()->init_mat_proj();
 
     /* ________________________________________________________________________ */
+    // /* ImGui init */
 
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO();
