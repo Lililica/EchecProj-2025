@@ -5,10 +5,15 @@
 #include "Game/game.hpp"
 #include "MyLibs/OpenGLutils/object/object.hpp"
 #include "MyLibs/OpenGLutils/utils.hpp"
+<<<<<<< HEAD
 #include "TrackBall.hpp"
 #include "glm/ext/vector_float3.hpp"
 
 enum ObjectType { Case = 10 };
+=======
+#include "Render/TrackBall.hpp"
+#include "Render/mouseCasting.hpp"
+>>>>>>> Test-before-bug
 
 struct GameDisplayInformation {
     float taille         = 150.f;
