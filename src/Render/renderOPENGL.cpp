@@ -1,14 +1,20 @@
 #include "renderOPENGL.hpp"
+#include "glm/ext/matrix_clip_space.hpp"
+#include "glm/ext/matrix_transform.hpp"
+#include "glm/fwd.hpp"
+
+#define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
 #include <glad/glad.h>
-#include <glfw/src/internal.h>
 #include <glm/glm.hpp>
 #include "../Game/Piece/piece.hpp"
 #include "../Game/game.hpp"
-#include "mouseCasting.hpp"
+
+enum ObjectType { Case = 6 };
 
 void RenderOpenGL::init_object()
 {
+    // Load the object
     this->objects = std::vector<Object>(7);
     objects[PieceType::PION].obj_loader("/Users/lililica/Documents/IMAC/Semestre4/EchecProj-2025/assets/texture/image.png", "/Users/lililica/Documents/IMAC/Semestre4/EchecProj-2025/assets/obj/Pawn.obj");
     objects[PieceType::TOUR].obj_loader("/Users/lililica/Documents/IMAC/Semestre4/EchecProj-2025/assets/texture/image.png", "/Users/lililica/Documents/IMAC/Semestre4/EchecProj-2025/assets/obj/Rook.obj");
@@ -21,8 +27,12 @@ void RenderOpenGL::init_object()
 
 void RenderOpenGL::draw_content(Game*& currentGame)
 {
-    manager.get_window_size(width, height);
+    /*********************************
+     * HERE SHOULD COME THE RENDERING CODE
+     *********************************/
 
+    manager.update_window_size();
+    manager.get_window_size(width, height);
     ProjMatrix = glm::perspective(glm::radians(70.f), float(width) / height, 0.1f, 500.f);
 
     button_action();
@@ -133,10 +143,30 @@ void RenderOpenGL::draw_game(Game*& currentGame)
     {
         for (int x{0}; x < currentGame->getGridSize(); ++x)
         {
-            MVMatrix     = glm::translate(glm::mat4(1), glm::vec3(x * plateau.tailleCase - (plateau.taille - plateau.tailleCase) / 2., 0, y * plateau.tailleCase - (plateau.taille - plateau.tailleCase) / 2.)); // Translation
-            MVMatrix     = glm::scale(MVMatrix, glm::vec3(plateau.scaleCase, plateau.scaleCase, plateau.scaleCase));                                                                                             // Translation * Rotation * Translation * Scale
+            MVMatrix     = glm::translate(glm::mat4(1), glm::vec3(x * plateau.tailleCase - (plateau.taille / 2.), 0, (y + 1) * plateau.tailleCase - (plateau.taille / 2.))); // Translation
+            MVMatrix     = glm::scale(MVMatrix, glm::vec3(plateau.scaleCase, plateau.scaleCase * plateau.rapportHauteur, plateau.scaleCase));                                // Translation * Rotation * Translation * Scale
             NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
             MVP          = ProjMatrix * trackball.getViewMatrix() * MVMatrix;
+
+            if (mouse.collision.xHit == x && mouse.collision.yHit == y)
+                Color = glm::vec4(0.f, 1.f, 0.f, 1.f);
+            else
+                Color = glm::vec4(0.5f, 0.5f, 0.5f, 1.f);
+            if (currentGame->is_selected_piece() && currentGame->get_pos_selected_piece() == std::make_pair(x, y))
+                Color = glm::vec4(0.f, 0.f, 1.f, 1.f);
+            if (currentGame->is_selected_piece())
+            {
+                auto possible_pos = currentGame->get_possible_pos();
+                if (std::find(possible_pos.begin(), possible_pos.end(), std::pair<int, int>{x, y}) != possible_pos.end())
+                {
+                    Color = glm::vec4(1.f, 0.f, 1.f, 1.f);
+                }
+                auto possible_attack = currentGame->get_attack_possible();
+                if (std::find(possible_attack.begin(), possible_attack.end(), std::pair<int, int>{x, y}) != possible_attack.end())
+                {
+                    Color = glm::vec4(1.f, 0.f, 0.f, 1.f);
+                }
+            }
 
             glUniformMatrix4fv(glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(), "uMVPMatrix"), 1, GL_FALSE, glm::value_ptr(MVP));
             glUniformMatrix4fv(glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(), "uMVMatrix"), 1, GL_FALSE, glm::value_ptr(MVMatrix));
@@ -157,6 +187,8 @@ void RenderOpenGL::draw_game(Game*& currentGame)
                 MVMatrix                 = glm::scale(MVMatrix, glm::vec3(plateau.scalePiece, plateau.scalePiece * colorDirection, plateau.scalePiece));                                                                         // Translation * Rotation * Translation * Scale
                 NormalMatrix             = glm::transpose(glm::inverse(MVMatrix));
                 MVP                      = ProjMatrix * trackball.getViewMatrix() * MVMatrix; // Translation * Rotation * Translation
+
+                Color = piece->get_color() == PieceColor::WHITE ? glm::vec4(1.f, 1.f, 1.f, 1.f) : glm::vec4(0.f, 0.f, 0.f, 1.f);
 
                 glUniformMatrix4fv(glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(), "uMVPMatrix"), 1, GL_FALSE, glm::value_ptr(MVP));
                 glUniformMatrix4fv(glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(), "uMVMatrix"), 1, GL_FALSE, glm::value_ptr(MVMatrix));

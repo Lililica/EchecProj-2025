@@ -18,10 +18,6 @@ public:
     {
         program =
             glimac::loadProgram(vertex_file_path, fragment_file_path);
-    };
-
-    void useProgram()
-    {
         program.use();
     };
 };

@@ -169,15 +169,15 @@
 },
 {
   "directory": "/Users/lililica/Desktop/EchecProj-2025/build",
-  "command": "/usr/bin/clang++ -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -o CMakeFiles/SimpleCpp.dir/src/appUtils.cpp.o -c /Users/lililica/Desktop/EchecProj-2025/src/appUtils.cpp",
-  "file": "/Users/lililica/Desktop/EchecProj-2025/src/appUtils.cpp",
-  "output": "CMakeFiles/SimpleCpp.dir/src/appUtils.cpp.o"
-},
-{
-  "directory": "/Users/lililica/Desktop/EchecProj-2025/build",
   "command": "/usr/bin/clang++ -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -o CMakeFiles/SimpleCpp.dir/src/main.cpp.o -c /Users/lililica/Desktop/EchecProj-2025/src/main.cpp",
   "file": "/Users/lililica/Desktop/EchecProj-2025/src/main.cpp",
   "output": "CMakeFiles/SimpleCpp.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/lililica/Desktop/EchecProj-2025/build",
+  "command": "/usr/bin/clang++ -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -o CMakeFiles/SimpleCpp.dir/src/shaders/ShaderReader.cpp.o -c /Users/lililica/Desktop/EchecProj-2025/src/shaders/ShaderReader.cpp",
+  "file": "/Users/lililica/Desktop/EchecProj-2025/src/shaders/ShaderReader.cpp",
+  "output": "CMakeFiles/SimpleCpp.dir/src/shaders/ShaderReader.cpp.o"
 },
 {
   "directory": "/Users/lililica/Desktop/EchecProj-2025/build",

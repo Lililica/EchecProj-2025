@@ -1,5 +1,5 @@
 #include "TrackBall.hpp"
-#include <glm/gtc/matrix_transform.hpp>
+#include "glm/ext/matrix_transform.hpp"
 
 glm::mat4 TrackballCamera::getViewMatrix() const
 {

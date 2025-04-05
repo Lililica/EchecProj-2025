@@ -14,17 +14,6 @@ void App::setup_app()
 
 void App::update_app()
 {
-    loop_opengl();
-
-    loop_imgui();
-}
-
-void App::loop_imgui()
-{
-    // Init ImGui for a new frame
-    imgui_pre_render();
-
-    // Manage game selection and menu state
     if (this->_currentMenu->get_state() == MenuState::HOME)
     {
         this->_currentMenu->draw_me();
@@ -38,20 +27,57 @@ void App::loop_imgui()
         }
         this->_render2D.draw_content(*this->_currentGame);
     }
+}
 
-    // Render ImGui
-    imgui_render();
+void App::select_game(GameMode mode)
+{
+    if (mode == GameMode::CLASSIC)
+        this->_currentGame = &this->_myGames.classic;
+    if (mode == GameMode::CHAOS)
+        this->_currentGame = &this->_myGames.chaos;
+}
+
+void App::set_chess_font(ImFont* font)
+{
+    this->_render2D.ChessFont   = font;
+    this->_render2D.DefaultFont = ImGui::GetIO().Fonts->AddFontDefault();
+}
+
+void App::set_menu(MenuState state)
+{
+    if (state == MenuState::HOME)
+        this->_currentMenu = &this->_myMenus.home;
+    if (state == MenuState::IN_GAME)
+        this->_currentMenu = &this->_myMenus.ingame;
+    if (state == MenuState::PAUSE)
+        this->_currentMenu = &this->_myMenus.pause;
+}
+
+void App::loop_imgui()
+{
+    ImGui_ImplGlfw_NewFrame();
+    ImGui_ImplOpenGL3_NewFrame();
+    ImGui::NewFrame();
+    ImGui::DockSpaceOverViewport(ImGui::GetMainViewport(), ImGuiDockNodeFlags_PassthruCentralNode);
+
+    ImGui::PushFont(this->_render2D.DefaultFont);
+    ImGui::Begin("Echec Game");
+
+    update_app();
+
+    ImGui::PopFont();
+
+    ImGui::End();
+
+    ImGui::Render();
+    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 }
 
 void App::loop_opengl()
 {
-    this->_render3D.getManager()->update_window_size();
-
     glClearColor(1.f, 0.5f, 0.5f, 1.f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    // make the whole screen dockable
 
-    // if (this->_currentMenu->get_state() == MenuState::IN_GAME)
-    // {
     this->_render3D.draw_content(this->_currentGame);
-    // }
 }

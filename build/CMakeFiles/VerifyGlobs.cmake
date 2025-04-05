@@ -5,7 +5,6 @@ cmake_policy(SET CMP0009 NEW)
 # MY_SOURCES at CMakeLists.txt:41 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/Users/lililica/Desktop/EchecProj-2025/src/*")
 set(OLD_GLOB
-  "/Users/lililica/Desktop/EchecProj-2025/src/.DS_Store"
   "/Users/lililica/Desktop/EchecProj-2025/src/Game/Piece/cavalier.cpp"
   "/Users/lililica/Desktop/EchecProj-2025/src/Game/Piece/cavalier.hpp"
   "/Users/lililica/Desktop/EchecProj-2025/src/Game/Piece/dame.cpp"
@@ -77,8 +76,8 @@ set(OLD_GLOB
   "/Users/lililica/Desktop/EchecProj-2025/src/Render/renderOPENGL.hpp"
   "/Users/lililica/Desktop/EchecProj-2025/src/app.cpp"
   "/Users/lililica/Desktop/EchecProj-2025/src/app.hpp"
-  "/Users/lililica/Desktop/EchecProj-2025/src/appUtils.cpp"
   "/Users/lililica/Desktop/EchecProj-2025/src/main.cpp"
+  "/Users/lililica/Desktop/EchecProj-2025/src/shaders/ShaderReader.cpp"
   "/Users/lililica/Desktop/EchecProj-2025/src/shaders/ShaderReader.hpp"
   "/Users/lililica/Desktop/EchecProj-2025/src/shaders/directionallight.fs.glsl"
   "/Users/lililica/Desktop/EchecProj-2025/src/shaders/shader.fs.glsl"

@@ -1,5 +1,6 @@
 #pragma once
-#include <glm/glm.hpp>
+
+#include "glm/ext/matrix_float4x4.hpp"
 
 class TrackballCamera {
 private:

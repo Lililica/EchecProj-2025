@@ -2,15 +2,10 @@
 
 #include <vector>
 #include "Game/Piece/cavalier.hpp"
-#include "Game/game.hpp"
 #include "MyLibs/OpenGLutils/object/object.hpp"
 #include "MyLibs/OpenGLutils/utils.hpp"
 #include "Render/TrackBall.hpp"
 #include "Render/mouseCasting.hpp"
-#include "TrackBall.hpp"
-#include "glm/ext/vector_float3.hpp"
-
-enum ObjectType { Case = 10 };
 
 struct GameDisplayInformation {
     float taille         = 150.f;
@@ -53,7 +48,7 @@ public:
     void init_object();
     void init_mat_proj()
     {
-        ProjMatrix   = glm::perspective(glm::radians(70.f), float(width) / height, 0.1f, 300.f);
+        ProjMatrix   = glm::perspective(glm::radians(70.f), float(width) / height, 0.1f, 500.f);
         MVMatrix     = glm::translate(glm::mat4(1.f), glm::vec3(0.f, 0.f, -500.f));
         NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
         MVP          = ProjMatrix * MVMatrix * trackball.getViewMatrix();
