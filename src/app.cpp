@@ -47,8 +47,11 @@ void App::loop_opengl()
 {
     this->_render3D.getManager()->update_window_size();
 
-    if (this->_currentMenu->get_state() == MenuState::IN_GAME)
-    {
-        this->_render3D.draw_content(this->_currentGame);
-    }
+    glClearColor(1.f, 0.5f, 0.5f, 1.f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    // if (this->_currentMenu->get_state() == MenuState::IN_GAME)
+    // {
+    this->_render3D.draw_content(this->_currentGame);
+    // }
 }

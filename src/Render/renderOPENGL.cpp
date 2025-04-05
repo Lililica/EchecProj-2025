@@ -86,9 +86,6 @@ void RenderOpenGL::mouse_action(Game*& currentGame)
 
 void RenderOpenGL::draw_game(Game*& currentGame)
 {
-    glClearColor(1.f, 0.5f, 0.5f, 1.f);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
     for (int y{0}; y < currentGame->getGridSize(); ++y)
     {
         for (int x{0}; x < currentGame->getGridSize(); ++x)

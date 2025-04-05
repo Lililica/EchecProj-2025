@@ -66,7 +66,7 @@ public:
     void init_object();
     void init_mat_proj()
     {
-        ProjMatrix   = glm::perspective(glm::radians(70.f), float(width) / height, 0.1f, 500.f);
+        ProjMatrix   = glm::perspective(glm::radians(70.f), float(width) / height, 0.1f, 300.f);
         MVMatrix     = glm::translate(glm::mat4(1.f), glm::vec3(0.f, 0.f, -500.f));
         NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
         MVP          = ProjMatrix * MVMatrix * trackball.getViewMatrix();
