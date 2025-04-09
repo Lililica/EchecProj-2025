@@ -12,7 +12,12 @@ private:
 
 public:
   Texture() = default;
-  Texture(const std::string &path) {
+  ~Texture() {
+    std::cout << "Texture deleted" << std::endl;
+    glDeleteTextures(1, &texture);
+  };
+
+  void init_texture(const std::string &path) {
     glGenTextures(1, &texture);
     glBindTexture(GL_TEXTURE_2D, texture);
 
@@ -33,5 +38,6 @@ public:
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glBindTexture(GL_TEXTURE_2D, 0);
   };
-  ~Texture() { glDeleteTextures(1, &texture); };
+
+  GLuint getTexture() const { return texture; };
 };

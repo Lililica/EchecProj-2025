@@ -37,7 +37,8 @@ void RenderOpenGL::draw_cases(Game *&currentGame, int x, int y) {
   if (mouse.collision.xHit == x && mouse.collision.yHit == y)
     Color = glm::vec4(0.f, 1.f, 0.f, 1.f);
   else
-    Color = glm::vec4(0.5f, 0.5f, 0.5f, 1.f);
+    Color = (x + y) % 2 == 0 ? glm::vec4(0.1f, 0.1f, 0.1f, 1.f)
+                             : glm::vec4(0.8f, 0.8f, 0.8f, 1.f);
   if (currentGame->is_selected_piece() &&
       currentGame->get_pos_selected_piece() == std::make_pair(x, y))
     Color = glm::vec4(0.f, 0.f, 1.f, 1.f);
@@ -70,6 +71,10 @@ void RenderOpenGL::draw_cases(Game *&currentGame, int x, int y) {
       glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
                            "uColor"),
       1, glm::value_ptr(Color));
+  glUniform1i(
+      glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
+                           "isTexture"),
+      0);
 
   glBindVertexArray(objects[ObjectType::Case].getVAO()->getGLuint());
   glDrawArrays(GL_TRIANGLES, 0, objects[ObjectType::Case].getVAO()->getSize());
@@ -101,7 +106,7 @@ void RenderOpenGL::draw_pieces(Game *&currentGame, int x, int y) {
 
   Color = piece->get_color() == PieceColor::WHITE
               ? glm::vec4(1.f, 1.f, 1.f, 1.f)
-              : glm::vec4(0.f, 0.f, 0.f, 1.f);
+              : glm::vec4(0.2f, 0.2f, 0.2f, 1.f);
 
   glUniformMatrix4fv(
       glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
@@ -119,9 +124,20 @@ void RenderOpenGL::draw_pieces(Game *&currentGame, int x, int y) {
       glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
                            "uColor"),
       1, glm::value_ptr(Color));
+  glUniform1i(
+      glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
+                           "isTexture"),
+      0);
+  glUniform3fv(
+      glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
+                           "viewPos"),
+      1, glm::value_ptr(trackball.getPosition()));
 
   glBindVertexArray(objects[type].getVAO()->getGLuint());
+  glBindTexture(GL_TEXTURE_2D,
+                objects[ObjectType::Case].getTexture()->getTexture());
   glDrawArrays(GL_TRIANGLES, 0, objects[type].getVAO()->getSize());
+  glBindTexture(GL_TEXTURE_2D, 0);
   glBindVertexArray(0);
 }
 
@@ -157,40 +173,19 @@ void RenderOpenGL::draw_board() {
       glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
                            "uColor"),
       1, glm::value_ptr(Color));
+  glUniform1i(
+      glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
+                           "uTexture"),
+      0);
+  glUniform1i(
+      glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
+                           "isTexture"),
+      1);
 
   glBindVertexArray(objects[ObjectType::Case].getVAO()->getGLuint());
+  glBindTexture(GL_TEXTURE_2D,
+                objects[ObjectType::Case].getTexture()->getTexture());
   glDrawArrays(GL_TRIANGLES, 0, objects[ObjectType::Case].getVAO()->getSize());
-  glBindVertexArray(0);
-
-  // Plane section
-
-  MVMatrix = glm::translate(glm::mat4(1), glm::vec3(-1000, -100,
-                                                    -1000)); // Translation
-  MVMatrix = glm::scale(MVMatrix, glm::vec3(2000, 0.1f,
-                                            -2000)); // Translation * Rotation
-                                                     // * Translation * Scale
-  NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
-  MVP = ProjMatrix * trackball.getViewMatrix() * MVMatrix;
-  Color = glm::vec4(0.f, 0.6f, 0.2f, 1.f);
-
-  glUniformMatrix4fv(
-      glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
-                           "uMVPMatrix"),
-      1, GL_FALSE, glm::value_ptr(MVP));
-  glUniformMatrix4fv(
-      glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
-                           "uMVMatrix"),
-      1, GL_FALSE, glm::value_ptr(MVMatrix));
-  glUniformMatrix4fv(
-      glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
-                           "uNormalMatrix"),
-      1, GL_FALSE, glm::value_ptr(NormalMatrix));
-  glUniform4fv(
-      glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
-                           "uColor"),
-      1, glm::value_ptr(Color));
-
-  glBindVertexArray(objects[ObjectType::Case].getVAO()->getGLuint());
-  glDrawArrays(GL_TRIANGLES, 0, objects[ObjectType::Case].getVAO()->getSize());
+  glBindTexture(GL_TEXTURE_2D, 0);
   glBindVertexArray(0);
 }

@@ -385,9 +385,7 @@
 				77,
 				78,
 				79,
-				80,
-				81,
-				82
+				80
 			]
 		}
 	],
@@ -812,11 +810,6 @@
 		},
 		{
 			"backtrace" : 13,
-			"path" : "src/shaders/directionallight.fs.glsl",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 13,
 			"path" : "src/shaders/shader.fs.glsl",
 			"sourceGroupIndex" : 2
 		},
@@ -828,11 +821,6 @@
 		{
 			"backtrace" : 13,
 			"path" : "src/shaders/skybox.vs.glsl",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 13,
-			"path" : "src/shaders/tex3D.fs.glsl",
 			"sourceGroupIndex" : 2
 		},
 		{

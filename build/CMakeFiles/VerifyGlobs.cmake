@@ -82,11 +82,9 @@ set(OLD_GLOB
   "/Users/lililica/Desktop/EchecProj-2025/src/app.hpp"
   "/Users/lililica/Desktop/EchecProj-2025/src/main.cpp"
   "/Users/lililica/Desktop/EchecProj-2025/src/shaders/ShaderReader.hpp"
-  "/Users/lililica/Desktop/EchecProj-2025/src/shaders/directionallight.fs.glsl"
   "/Users/lililica/Desktop/EchecProj-2025/src/shaders/shader.fs.glsl"
   "/Users/lililica/Desktop/EchecProj-2025/src/shaders/skybox.fs.glsl"
   "/Users/lililica/Desktop/EchecProj-2025/src/shaders/skybox.vs.glsl"
-  "/Users/lililica/Desktop/EchecProj-2025/src/shaders/tex3D.fs.glsl"
   "/Users/lililica/Desktop/EchecProj-2025/src/shaders/triangle.vs.glsl"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

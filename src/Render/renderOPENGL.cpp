@@ -28,33 +28,20 @@ void RenderOpenGL::init() {
 void RenderOpenGL::init_object() {
   // Load the object
   this->objects = std::vector<Object>(7);
-  objects[PieceType::PION].obj_loader(ASSETS_PATH "texture/"
-                                                  "image.png",
+  objects[PieceType::PION].obj_loader(ASSETS_PATH "texture/image.png",
                                       ASSETS_PATH "obj/Pawn.obj");
-  objects[PieceType::TOUR].obj_loader(ASSETS_PATH "texture/"
-                                                  "image.png",
-                                      ASSETS_PATH "obj/"
-                                                  "Rook.obj");
-  objects[PieceType::ROI].obj_loader("/Users/lililica/Documents/IMAC/Semestre4/"
-                                     "EchecProj-2025/assets/texture/image.png",
-                                     "/Users/lililica/Documents/IMAC/Semestre4/"
-                                     "EchecProj-2025/assets/obj/King.obj");
-  objects[PieceType::DAME].obj_loader(ASSETS_PATH "texture/"
-                                                  "image.png",
-                                      ASSETS_PATH "obj/"
-                                                  "Queen.obj");
-  objects[PieceType::FOU].obj_loader("/Users/lililica/Documents/IMAC/Semestre4/"
-                                     "EchecProj-2025/assets/texture/image.png",
-                                     "/Users/lililica/Documents/IMAC/Semestre4/"
-                                     "EchecProj-2025/assets/obj/Bishop.obj");
-  objects[PieceType::CAVALIER].obj_loader(ASSETS_PATH "texture/"
-                                                      "image.png",
-                                          ASSETS_PATH "obj/"
-                                                      "Knight.obj");
-  objects[ObjectType::Case].obj_loader(ASSETS_PATH "texture/"
-                                                   "image.png",
-                                       ASSETS_PATH "obj/"
-                                                   "case.obj");
+  objects[PieceType::TOUR].obj_loader(ASSETS_PATH "texture/image.png",
+                                      ASSETS_PATH "obj/Rook.obj");
+  objects[PieceType::ROI].obj_loader(ASSETS_PATH "texture/image.png",
+                                     ASSETS_PATH "obj/King.obj");
+  objects[PieceType::DAME].obj_loader(ASSETS_PATH "texture/image.png",
+                                      ASSETS_PATH "obj/Queen.obj");
+  objects[PieceType::FOU].obj_loader(ASSETS_PATH "texture/image.png",
+                                     ASSETS_PATH "obj/Bishop.obj");
+  objects[PieceType::CAVALIER].obj_loader(ASSETS_PATH "texture/image.png",
+                                          ASSETS_PATH "obj/Knight.obj");
+  objects[ObjectType::Case].obj_loader(ASSETS_PATH "texture/image.png",
+                                       ASSETS_PATH "obj/case.obj");
 }
 
 void RenderOpenGL::draw_content(Game *&currentGame) {
@@ -91,10 +78,9 @@ void RenderOpenGL::draw_content(Game *&currentGame) {
       1, GL_FALSE, glm::value_ptr(ProjMatrix));
 
   glBindVertexArray(skybox.getSkyboxVAO());
-  glActiveTexture(GL_TEXTURE0);
-  // glBindTexture(GL_TEXTURE_2D, skybox.getSkyboxTexture());
   glBindTexture(GL_TEXTURE_CUBE_MAP, skybox.getSkyboxTexture());
   glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
+  glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
   glBindVertexArray(0);
 
   glDepthMask(GL_TRUE);

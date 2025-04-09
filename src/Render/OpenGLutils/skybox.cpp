@@ -59,8 +59,6 @@ void Skybox::init_Texture() {
     }
   }
 
-  glGenerateMipmap(GL_TEXTURE_CUBE_MAP);
-
   std::cout << "Skybox texture loaded : " << cubemapTexture << std::endl;
   glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
   //   glBindTexture(GL_TEXTURE_2D, 0);

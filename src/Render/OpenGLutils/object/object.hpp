@@ -18,6 +18,6 @@ public:
   void obj_loader(std::string const &path_texture,
                   std::string const &path_obj) {
     vao.init_vao(path_obj);
-    texture = Texture(path_texture);
+    texture.init_texture(path_texture);
   }
 };
