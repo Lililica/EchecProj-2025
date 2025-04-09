@@ -1,11 +1,23 @@
 #pragma once
 
 #include "Game/game.hpp"
-#include "MyLibs/OpenGLutils/object/object.hpp"
-#include "MyLibs/OpenGLutils/utils.hpp"
+#include "OpenGLutils/object/object.hpp"
+#include "OpenGLutils/utils.hpp"
+#include "Render/OpenGLutils/skybox.hpp"
 #include "Render/TrackBall.hpp"
 #include "Render/mouseCasting.hpp"
+#include "glm/ext/matrix_clip_space.hpp"
+#include "glm/ext/matrix_transform.hpp"
+#include "shaders/ShaderReader.hpp"
+#include <glm/glm.hpp>
 #include <vector>
+
+enum ObjectType { Case = 6 };
+
+enum ShaderIndices {
+  ShaderObj = 0,
+  ShaderSkybox = 1,
+};
 
 struct GameDisplayInformation {
   float taille = 150.f;
@@ -19,11 +31,10 @@ struct GameDisplayInformation {
 class RenderOpenGL {
 private:
   OpenGL_Manager manager;
+  Skybox skybox;
 
   std::vector<Object> objects;
-
-  int width = WINDOW_WIDTH;
-  int height = WINDOW_HEIGHT;
+  std::vector<ShaderLoader> shaders;
 
   glm::mat4 ProjMatrix;
   glm::mat4 MVMatrix;
@@ -37,20 +48,34 @@ private:
   GameDisplayInformation plateau;
 
 public:
+  void init();
   void draw_content(Game *&currentGame);
   void button_action();
-  void draw_game(Game *&currentGame);
-  void reset_matrix() { init_mat_proj(); }
+  void mouse_action(Game *&currentGame);
 
+  // Drawing Game and Objects
+  void draw_game(Game *&currentGame);
+
+  void draw_cases(Game *&currentGame, int x, int y);
+  void draw_pieces(Game *&currentGame, int x, int y);
+  void draw_board();
+
+  // Shader loading
+  void init_shaders();
+
+  // Object loading
   void init_object();
+
+  // Projection matrix
+  void reset_matrix() { init_mat_proj(); }
   void init_mat_proj() {
-    ProjMatrix = glm::perspective(glm::radians(70.f), float(width) / height,
-                                  0.1f, 500.f);
+    ProjMatrix = glm::perspective(
+        glm::radians(70.f), float(manager.getWidth()) / manager.getHeight(),
+        0.1f, 2000.f);
     MVMatrix = glm::translate(glm::mat4(1.f), glm::vec3(0.f, 0.f, -500.f));
     NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
     MVP = ProjMatrix * MVMatrix * trackball.getViewMatrix();
   }
 
-  std::vector<Object> *getObjectTest() { return &objects; }
   OpenGL_Manager *getManager() { return &manager; }
 };

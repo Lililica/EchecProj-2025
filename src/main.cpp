@@ -1,15 +1,16 @@
+#include "Render/OpenGLutils/object/object.hpp"
+#include "Render/OpenGLutils/utils.hpp"
+#include "shaders/ShaderReader.hpp"
 #include <vector>
-#include "MyLibs/OpenGLutils/object/object.hpp"
-#include "MyLibs/OpenGLutils/utils.hpp"
 #define GL_SILENCE_DEPRECATION
+#include "MyLibs/glimac/FilePath.hpp"
+#include "app.hpp"
 #include <OpenGL/gl.h>
 #include <backends/imgui_impl_glfw.h>
 #include <backends/imgui_impl_opengl3.h>
-#include <imgui.h>
 #include <cstddef>
+#include <imgui.h>
 #include <quick_imgui/quick_imgui.hpp>
-#include "MyLibs/glimac/FilePath.hpp"
-#include "app.hpp"
 
 #define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
@@ -17,61 +18,47 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-int main(int argc, char** argv)
-{
-    App mainApp{};
+int main(int argc, char **argv) {
+  App mainApp{};
 
-    /* Initialize OpenGL */
+  // Render 3D init
+  mainApp.getRender3D()->init();
 
-    OpenGL_Manager* manager = mainApp.getManager();
-    manager->OpenGL_init();
+  /* ________________________________________________________________________ */
+  // /* ImGui init */
 
-    /* Load the shader program */
+  ImGui::CreateContext();
+  ImGuiIO &io = ImGui::GetIO();
 
-    ShaderLoader shaderLoader;
-    manager->setShaderLoader(&shaderLoader);
-    glimac::FilePath applicationPath(argv[0]);
-    manager->getShaderLoader()->loadShaders("/Users/lililica/Documents/IMAC/Semestre4/EchecProj-2025/src/shaders/triangle.vs.glsl", "/Users/lililica/Documents/IMAC/Semestre4/EchecProj-2025/src/shaders/shader.fs.glsl");
+  mainApp.set_chess_font(
+      io.Fonts->AddFontFromFileTTF("/Users/lililica/Documents/IMAC/Semestre4/"
+                                   "EchecProj-2025/assets/font/CHEQ_TT.TTF",
+                                   30.f));
 
-    /* Her we have texture and objects loading */
+  mainApp.setup_app();
 
-    mainApp.getRender3D()->init_object();
-    std::vector<Object>* obj_test = mainApp.getRender3D()->getObjectTest();
-    mainApp.getRender3D()->init_mat_proj();
+  ImFont *basicFont = io.Fonts->AddFontDefault();
 
-    /* ________________________________________________________________________ */
-    // /* ImGui init */
+  mainApp.getManager()->ImGui_init();
 
-    ImGui::CreateContext();
-    ImGuiIO& io = ImGui::GetIO();
+  /* Loop until the user closes the window */
 
-    mainApp.set_chess_font(io.Fonts->AddFontFromFileTTF("/Users/lililica/Documents/IMAC/Semestre4/EchecProj-2025/assets/font/CHEQ_TT.TTF", 30.f));
+  while (!glfwWindowShouldClose(mainApp.getManager()->getWindow())) {
+    /* Render here */
+    mainApp.loop_opengl();
 
-    mainApp.setup_app();
+    mainApp.loop_imgui();
 
-    ImFont* basicFont = io.Fonts->AddFontDefault();
+    /* Swap front and back buffers */
+    glfwSwapBuffers(mainApp.getManager()->getWindow());
+    /* Poll for and process events */
+    glfwPollEvents();
+  }
 
-    manager->ImGui_init();
+  ImGui_ImplGlfw_Shutdown();
+  ImGui_ImplOpenGL3_Shutdown();
+  ImGui::DestroyContext();
 
-    /* Loop until the user closes the window */
-
-    while (!glfwWindowShouldClose(manager->getWindow()))
-    {
-        /* Render here */
-        mainApp.loop_opengl();
-
-        mainApp.loop_imgui();
-
-        /* Swap front and back buffers */
-        glfwSwapBuffers(manager->getWindow());
-        /* Poll for and process events */
-        glfwPollEvents();
-    }
-
-    ImGui_ImplGlfw_Shutdown();
-    ImGui_ImplOpenGL3_Shutdown();
-    ImGui::DestroyContext();
-
-    glfwTerminate();
-    return 0;
+  glfwTerminate();
+  return 0;
 }

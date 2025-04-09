@@ -50,274 +50,260 @@ cmake_ninja_workdir = /Users/lililica/Desktop/EchecProj-2025/build/
 build cmake_object_order_depends_target_SimpleCpp: phony || cmake_object_order_depends_target_ImGui cmake_object_order_depends_target_glad cmake_object_order_depends_target_glfw cmake_object_order_depends_target_quick_imgui
 
 build CMakeFiles/SimpleCpp.dir/src/Game/Piece/cavalier.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Game/Piece/cavalier.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Game/Piece/cavalier.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Game/Piece
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/Game/Piece/dame.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Game/Piece/dame.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Game/Piece/dame.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Game/Piece
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/Game/Piece/fou.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Game/Piece/fou.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Game/Piece/fou.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Game/Piece
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/Game/Piece/piece.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Game/Piece/piece.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Game/Piece/piece.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Game/Piece
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/Game/Piece/pion.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Game/Piece/pion.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Game/Piece/pion.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Game/Piece
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/Game/Piece/roi.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Game/Piece/roi.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Game/Piece/roi.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Game/Piece
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/Game/Piece/tour.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Game/Piece/tour.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Game/Piece/tour.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Game/Piece
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/Game/game.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Game/game.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Game/game.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Game
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/Game/gameChaos.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Game/gameChaos.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Game/gameChaos.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Game
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/Game/gameClassic.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Game/gameClassic.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Game/gameClassic.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Game
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/Game/game_utils.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Game/game_utils.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Game/game_utils.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Game
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/Menu/MenuList/menuHome.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Menu/MenuList/menuHome.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Menu/MenuList/menuHome.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Menu/MenuList
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/Menu/MenuList/menuInGame.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Menu/MenuList/menuInGame.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Menu/MenuList/menuInGame.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Menu/MenuList
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/Menu/MenuList/menuPause.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Menu/MenuList/menuPause.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Menu/MenuList/menuPause.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Menu/MenuList
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/Menu/button.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Menu/button.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Menu/button.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Menu
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/Menu/menu.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Menu/menu.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Menu/menu.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Menu
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
-
-build CMakeFiles/SimpleCpp.dir/src/MyLibs/OpenGLutils/ObjLoader/objloader.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/MyLibs/OpenGLutils/ObjLoader/objloader.cpp || cmake_object_order_depends_target_SimpleCpp
-  DEP_FILE = CMakeFiles/SimpleCpp.dir/src/MyLibs/OpenGLutils/ObjLoader/objloader.cpp.o.d
-  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
-  INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
-  OBJECT_DIR = CMakeFiles/SimpleCpp.dir
-  OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/MyLibs/OpenGLutils/ObjLoader
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
-
-build CMakeFiles/SimpleCpp.dir/src/MyLibs/OpenGLutils/utils.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/MyLibs/OpenGLutils/utils.cpp || cmake_object_order_depends_target_SimpleCpp
-  DEP_FILE = CMakeFiles/SimpleCpp.dir/src/MyLibs/OpenGLutils/utils.cpp.o.d
-  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
-  INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
-  OBJECT_DIR = CMakeFiles/SimpleCpp.dir
-  OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/MyLibs/OpenGLutils
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/MyLibs/src/Cone.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/MyLibs/src/Cone.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/MyLibs/src/Cone.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/MyLibs/src
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
-
-build CMakeFiles/SimpleCpp.dir/src/MyLibs/src/Image.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/MyLibs/src/Image.cpp || cmake_object_order_depends_target_SimpleCpp
-  DEP_FILE = CMakeFiles/SimpleCpp.dir/src/MyLibs/src/Image.cpp.o.d
-  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
-  INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
-  OBJECT_DIR = CMakeFiles/SimpleCpp.dir
-  OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/MyLibs/src
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/MyLibs/src/Program.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/MyLibs/src/Program.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/MyLibs/src/Program.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/MyLibs/src
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/MyLibs/src/Shader.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/MyLibs/src/Shader.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/MyLibs/src/Shader.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/MyLibs/src
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/MyLibs/src/Sphere.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/MyLibs/src/Sphere.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/MyLibs/src/Sphere.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/MyLibs/src
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
+
+build CMakeFiles/SimpleCpp.dir/src/MyLibs/stb_image/stb_image.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/MyLibs/stb_image/stb_image.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
+  DEP_FILE = CMakeFiles/SimpleCpp.dir/src/MyLibs/stb_image/stb_image.cpp.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
+  INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
+  OBJECT_DIR = CMakeFiles/SimpleCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/MyLibs/stb_image
+
+build CMakeFiles/SimpleCpp.dir/src/Render/OpenGLutils/ObjLoader/objloader.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Render/OpenGLutils/ObjLoader/objloader.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
+  DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Render/OpenGLutils/ObjLoader/objloader.cpp.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
+  INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
+  OBJECT_DIR = CMakeFiles/SimpleCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Render/OpenGLutils/ObjLoader
+
+build CMakeFiles/SimpleCpp.dir/src/Render/OpenGLutils/skybox.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Render/OpenGLutils/skybox.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
+  DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Render/OpenGLutils/skybox.cpp.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
+  INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
+  OBJECT_DIR = CMakeFiles/SimpleCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Render/OpenGLutils
+
+build CMakeFiles/SimpleCpp.dir/src/Render/OpenGLutils/utils.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Render/OpenGLutils/utils.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
+  DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Render/OpenGLutils/utils.cpp.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
+  INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
+  OBJECT_DIR = CMakeFiles/SimpleCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Render/OpenGLutils
+
+build CMakeFiles/SimpleCpp.dir/src/Render/ShaderManagement.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Render/ShaderManagement.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
+  DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Render/ShaderManagement.cpp.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
+  INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
+  OBJECT_DIR = CMakeFiles/SimpleCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Render
 
 build CMakeFiles/SimpleCpp.dir/src/Render/TrackBall.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Render/TrackBall.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Render/TrackBall.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Render
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
+
+build CMakeFiles/SimpleCpp.dir/src/Render/drawGame.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Render/drawGame.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
+  DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Render/drawGame.cpp.o.d
+  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
+  INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
+  OBJECT_DIR = CMakeFiles/SimpleCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Render
 
 build CMakeFiles/SimpleCpp.dir/src/Render/mouseCasting.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Render/mouseCasting.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Render/mouseCasting.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Render
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/Render/renderIMGUI.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Render/renderIMGUI.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Render/renderIMGUI.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Render
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/Render/renderOPENGL.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/Render/renderOPENGL.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/Render/renderOPENGL.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/Render
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/app.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/app.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/app.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 build CMakeFiles/SimpleCpp.dir/src/main.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/main.cpp || cmake_object_order_depends_target_SimpleCpp
+  DEFINES = -DASSETS_PATH=\"../../assets/\" -DSHADERS_PATH=\"../../src/shaders/\"
   DEP_FILE = CMakeFiles/SimpleCpp.dir/src/main.cpp.o.d
   FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
-
-build CMakeFiles/SimpleCpp.dir/src/shaders/ShaderReader.cpp.o: CXX_COMPILER__SimpleCpp_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/src/shaders/ShaderReader.cpp || cmake_object_order_depends_target_SimpleCpp
-  DEP_FILE = CMakeFiles/SimpleCpp.dir/src/shaders/ShaderReader.cpp.o.d
-  FLAGS = -g -std=c++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
-  INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/src -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
-  OBJECT_DIR = CMakeFiles/SimpleCpp.dir
-  OBJECT_FILE_DIR = CMakeFiles/SimpleCpp.dir/src/shaders
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
 
 
 # =============================================================================
@@ -327,15 +313,14 @@ build CMakeFiles/SimpleCpp.dir/src/shaders/ShaderReader.cpp.o: CXX_COMPILER__Sim
 #############################################
 # Link the executable /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp
 
-build /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp: CXX_EXECUTABLE_LINKER__SimpleCpp_Debug CMakeFiles/SimpleCpp.dir/src/Game/Piece/cavalier.cpp.o CMakeFiles/SimpleCpp.dir/src/Game/Piece/dame.cpp.o CMakeFiles/SimpleCpp.dir/src/Game/Piece/fou.cpp.o CMakeFiles/SimpleCpp.dir/src/Game/Piece/piece.cpp.o CMakeFiles/SimpleCpp.dir/src/Game/Piece/pion.cpp.o CMakeFiles/SimpleCpp.dir/src/Game/Piece/roi.cpp.o CMakeFiles/SimpleCpp.dir/src/Game/Piece/tour.cpp.o CMakeFiles/SimpleCpp.dir/src/Game/game.cpp.o CMakeFiles/SimpleCpp.dir/src/Game/gameChaos.cpp.o CMakeFiles/SimpleCpp.dir/src/Game/gameClassic.cpp.o CMakeFiles/SimpleCpp.dir/src/Game/game_utils.cpp.o CMakeFiles/SimpleCpp.dir/src/Menu/MenuList/menuHome.cpp.o CMakeFiles/SimpleCpp.dir/src/Menu/MenuList/menuInGame.cpp.o CMakeFiles/SimpleCpp.dir/src/Menu/MenuList/menuPause.cpp.o CMakeFiles/SimpleCpp.dir/src/Menu/button.cpp.o CMakeFiles/SimpleCpp.dir/src/Menu/menu.cpp.o CMakeFiles/SimpleCpp.dir/src/MyLibs/OpenGLutils/ObjLoader/objloader.cpp.o CMakeFiles/SimpleCpp.dir/src/MyLibs/OpenGLutils/utils.cpp.o CMakeFiles/SimpleCpp.dir/src/MyLibs/src/Cone.cpp.o CMakeFiles/SimpleCpp.dir/src/MyLibs/src/Image.cpp.o CMakeFiles/SimpleCpp.dir/src/MyLibs/src/Program.cpp.o CMakeFiles/SimpleCpp.dir/src/MyLibs/src/Shader.cpp.o CMakeFiles/SimpleCpp.dir/src/MyLibs/src/Sphere.cpp.o CMakeFiles/SimpleCpp.dir/src/Render/TrackBall.cpp.o CMakeFiles/SimpleCpp.dir/src/Render/mouseCasting.cpp.o CMakeFiles/SimpleCpp.dir/src/Render/renderIMGUI.cpp.o CMakeFiles/SimpleCpp.dir/src/Render/renderOPENGL.cpp.o CMakeFiles/SimpleCpp.dir/src/app.cpp.o CMakeFiles/SimpleCpp.dir/src/main.cpp.o CMakeFiles/SimpleCpp.dir/src/shaders/ShaderReader.cpp.o | lib/quick_imgui/libquick_imgui.a lib/quick_imgui/libglad.a lib/quick_imgui/libImGui.a lib/quick_imgui/lib/glfw/src/libglfw3.a || lib/quick_imgui/lib/glfw/src/libglfw3.a lib/quick_imgui/libImGui.a lib/quick_imgui/libglad.a lib/quick_imgui/libquick_imgui.a
+build /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp: CXX_EXECUTABLE_LINKER__SimpleCpp_Debug CMakeFiles/SimpleCpp.dir/src/Game/Piece/cavalier.cpp.o CMakeFiles/SimpleCpp.dir/src/Game/Piece/dame.cpp.o CMakeFiles/SimpleCpp.dir/src/Game/Piece/fou.cpp.o CMakeFiles/SimpleCpp.dir/src/Game/Piece/piece.cpp.o CMakeFiles/SimpleCpp.dir/src/Game/Piece/pion.cpp.o CMakeFiles/SimpleCpp.dir/src/Game/Piece/roi.cpp.o CMakeFiles/SimpleCpp.dir/src/Game/Piece/tour.cpp.o CMakeFiles/SimpleCpp.dir/src/Game/game.cpp.o CMakeFiles/SimpleCpp.dir/src/Game/gameChaos.cpp.o CMakeFiles/SimpleCpp.dir/src/Game/gameClassic.cpp.o CMakeFiles/SimpleCpp.dir/src/Game/game_utils.cpp.o CMakeFiles/SimpleCpp.dir/src/Menu/MenuList/menuHome.cpp.o CMakeFiles/SimpleCpp.dir/src/Menu/MenuList/menuInGame.cpp.o CMakeFiles/SimpleCpp.dir/src/Menu/MenuList/menuPause.cpp.o CMakeFiles/SimpleCpp.dir/src/Menu/button.cpp.o CMakeFiles/SimpleCpp.dir/src/Menu/menu.cpp.o CMakeFiles/SimpleCpp.dir/src/MyLibs/src/Cone.cpp.o CMakeFiles/SimpleCpp.dir/src/MyLibs/src/Program.cpp.o CMakeFiles/SimpleCpp.dir/src/MyLibs/src/Shader.cpp.o CMakeFiles/SimpleCpp.dir/src/MyLibs/src/Sphere.cpp.o CMakeFiles/SimpleCpp.dir/src/MyLibs/stb_image/stb_image.cpp.o CMakeFiles/SimpleCpp.dir/src/Render/OpenGLutils/ObjLoader/objloader.cpp.o CMakeFiles/SimpleCpp.dir/src/Render/OpenGLutils/skybox.cpp.o CMakeFiles/SimpleCpp.dir/src/Render/OpenGLutils/utils.cpp.o CMakeFiles/SimpleCpp.dir/src/Render/ShaderManagement.cpp.o CMakeFiles/SimpleCpp.dir/src/Render/TrackBall.cpp.o CMakeFiles/SimpleCpp.dir/src/Render/drawGame.cpp.o CMakeFiles/SimpleCpp.dir/src/Render/mouseCasting.cpp.o CMakeFiles/SimpleCpp.dir/src/Render/renderIMGUI.cpp.o CMakeFiles/SimpleCpp.dir/src/Render/renderOPENGL.cpp.o CMakeFiles/SimpleCpp.dir/src/app.cpp.o CMakeFiles/SimpleCpp.dir/src/main.cpp.o | lib/quick_imgui/libquick_imgui.a lib/quick_imgui/libglad.a lib/quick_imgui/libImGui.a lib/quick_imgui/lib/glfw/src/libglfw3.a || lib/quick_imgui/lib/glfw/src/libglfw3.a lib/quick_imgui/libImGui.a lib/quick_imgui/libglad.a lib/quick_imgui/libquick_imgui.a
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
   LINK_LIBRARIES = lib/quick_imgui/libquick_imgui.a  lib/quick_imgui/libglad.a  lib/quick_imgui/libImGui.a  lib/quick_imgui/lib/glfw/src/libglfw3.a  -framework Cocoa  -framework IOKit  -framework CoreFoundation  -framework QuartzCore
   OBJECT_DIR = CMakeFiles/SimpleCpp.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/SimpleCpp.dir/
   TARGET_FILE = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp
-  TARGET_PDB = /Users/lililica/Desktop/EchecProj-2025/bin/Debug/SimpleCpp.pdb
+  TARGET_PDB = SimpleCpp.dbg
 
 
 #############################################
@@ -423,8 +408,6 @@ build lib/quick_imgui/CMakeFiles/quick_imgui.dir/src/quick_imgui.cpp.o: CXX_COMP
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = lib/quick_imgui/CMakeFiles/quick_imgui.dir
   OBJECT_FILE_DIR = lib/quick_imgui/CMakeFiles/quick_imgui.dir/src
-  TARGET_COMPILE_PDB = lib/quick_imgui/CMakeFiles/quick_imgui.dir/quick_imgui.pdb
-  TARGET_PDB = lib/quick_imgui/libquick_imgui.pdb
 
 build lib/quick_imgui/CMakeFiles/quick_imgui.dir/src/ImGuiWrapper.cpp.o: CXX_COMPILER__quick_imgui_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/src/ImGuiWrapper.cpp || cmake_object_order_depends_target_quick_imgui
   DEP_FILE = lib/quick_imgui/CMakeFiles/quick_imgui.dir/src/ImGuiWrapper.cpp.o.d
@@ -432,8 +415,6 @@ build lib/quick_imgui/CMakeFiles/quick_imgui.dir/src/ImGuiWrapper.cpp.o: CXX_COM
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = lib/quick_imgui/CMakeFiles/quick_imgui.dir
   OBJECT_FILE_DIR = lib/quick_imgui/CMakeFiles/quick_imgui.dir/src
-  TARGET_COMPILE_PDB = lib/quick_imgui/CMakeFiles/quick_imgui.dir/quick_imgui.pdb
-  TARGET_PDB = lib/quick_imgui/libquick_imgui.pdb
 
 build lib/quick_imgui/CMakeFiles/quick_imgui.dir/src/AverageTime.cpp.o: CXX_COMPILER__quick_imgui_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/src/AverageTime.cpp || cmake_object_order_depends_target_quick_imgui
   DEP_FILE = lib/quick_imgui/CMakeFiles/quick_imgui.dir/src/AverageTime.cpp.o.d
@@ -441,8 +422,6 @@ build lib/quick_imgui/CMakeFiles/quick_imgui.dir/src/AverageTime.cpp.o: CXX_COMP
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = lib/quick_imgui/CMakeFiles/quick_imgui.dir
   OBJECT_FILE_DIR = lib/quick_imgui/CMakeFiles/quick_imgui.dir/src
-  TARGET_COMPILE_PDB = lib/quick_imgui/CMakeFiles/quick_imgui.dir/quick_imgui.pdb
-  TARGET_PDB = lib/quick_imgui/libquick_imgui.pdb
 
 
 # =============================================================================
@@ -458,9 +437,8 @@ build lib/quick_imgui/libquick_imgui.a: CXX_STATIC_LIBRARY_LINKER__quick_imgui_D
   OBJECT_DIR = lib/quick_imgui/CMakeFiles/quick_imgui.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = lib/quick_imgui/CMakeFiles/quick_imgui.dir/quick_imgui.pdb
   TARGET_FILE = lib/quick_imgui/libquick_imgui.a
-  TARGET_PDB = lib/quick_imgui/libquick_imgui.pdb
+  TARGET_PDB = quick_imgui.a.dbg
 
 # =============================================================================
 # Object build statements for STATIC_LIBRARY target glad
@@ -477,8 +455,6 @@ build lib/quick_imgui/CMakeFiles/glad.dir/lib/glad/src/glad.c.o: C_COMPILER__gla
   INCLUDES = -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glad/include
   OBJECT_DIR = lib/quick_imgui/CMakeFiles/glad.dir
   OBJECT_FILE_DIR = lib/quick_imgui/CMakeFiles/glad.dir/lib/glad/src
-  TARGET_COMPILE_PDB = lib/quick_imgui/CMakeFiles/glad.dir/glad.pdb
-  TARGET_PDB = lib/quick_imgui/libglad.pdb
 
 
 # =============================================================================
@@ -494,9 +470,8 @@ build lib/quick_imgui/libglad.a: C_STATIC_LIBRARY_LINKER__glad_Debug lib/quick_i
   OBJECT_DIR = lib/quick_imgui/CMakeFiles/glad.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = lib/quick_imgui/CMakeFiles/glad.dir/glad.pdb
   TARGET_FILE = lib/quick_imgui/libglad.a
-  TARGET_PDB = lib/quick_imgui/libglad.pdb
+  TARGET_PDB = glad.a.dbg
 
 # =============================================================================
 # Object build statements for STATIC_LIBRARY target ImGui
@@ -513,8 +488,6 @@ build lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/imgui_demo.cpp.o: CXX_COMPI
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = lib/quick_imgui/CMakeFiles/ImGui.dir
   OBJECT_FILE_DIR = lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui
-  TARGET_COMPILE_PDB = lib/quick_imgui/CMakeFiles/ImGui.dir/ImGui.pdb
-  TARGET_PDB = lib/quick_imgui/libImGui.pdb
 
 build lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/imgui_draw.cpp.o: CXX_COMPILER__ImGui_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui/imgui_draw.cpp || cmake_object_order_depends_target_ImGui
   DEP_FILE = lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/imgui_draw.cpp.o.d
@@ -522,8 +495,6 @@ build lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/imgui_draw.cpp.o: CXX_COMPI
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = lib/quick_imgui/CMakeFiles/ImGui.dir
   OBJECT_FILE_DIR = lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui
-  TARGET_COMPILE_PDB = lib/quick_imgui/CMakeFiles/ImGui.dir/ImGui.pdb
-  TARGET_PDB = lib/quick_imgui/libImGui.pdb
 
 build lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/imgui_tables.cpp.o: CXX_COMPILER__ImGui_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui/imgui_tables.cpp || cmake_object_order_depends_target_ImGui
   DEP_FILE = lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/imgui_tables.cpp.o.d
@@ -531,8 +502,6 @@ build lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/imgui_tables.cpp.o: CXX_COM
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = lib/quick_imgui/CMakeFiles/ImGui.dir
   OBJECT_FILE_DIR = lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui
-  TARGET_COMPILE_PDB = lib/quick_imgui/CMakeFiles/ImGui.dir/ImGui.pdb
-  TARGET_PDB = lib/quick_imgui/libImGui.pdb
 
 build lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/imgui_widgets.cpp.o: CXX_COMPILER__ImGui_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_ImGui
   DEP_FILE = lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/imgui_widgets.cpp.o.d
@@ -540,8 +509,6 @@ build lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/imgui_widgets.cpp.o: CXX_CO
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = lib/quick_imgui/CMakeFiles/ImGui.dir
   OBJECT_FILE_DIR = lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui
-  TARGET_COMPILE_PDB = lib/quick_imgui/CMakeFiles/ImGui.dir/ImGui.pdb
-  TARGET_PDB = lib/quick_imgui/libImGui.pdb
 
 build lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/imgui.cpp.o: CXX_COMPILER__ImGui_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui/imgui.cpp || cmake_object_order_depends_target_ImGui
   DEP_FILE = lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/imgui.cpp.o.d
@@ -549,8 +516,6 @@ build lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/imgui.cpp.o: CXX_COMPILER__
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = lib/quick_imgui/CMakeFiles/ImGui.dir
   OBJECT_FILE_DIR = lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui
-  TARGET_COMPILE_PDB = lib/quick_imgui/CMakeFiles/ImGui.dir/ImGui.pdb
-  TARGET_PDB = lib/quick_imgui/libImGui.pdb
 
 build lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/misc/cpp/imgui_stdlib.cpp.o: CXX_COMPILER__ImGui_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui/misc/cpp/imgui_stdlib.cpp || cmake_object_order_depends_target_ImGui
   DEP_FILE = lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/misc/cpp/imgui_stdlib.cpp.o.d
@@ -558,8 +523,6 @@ build lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/misc/cpp/imgui_stdlib.cpp.o
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = lib/quick_imgui/CMakeFiles/ImGui.dir
   OBJECT_FILE_DIR = lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/misc/cpp
-  TARGET_COMPILE_PDB = lib/quick_imgui/CMakeFiles/ImGui.dir/ImGui.pdb
-  TARGET_PDB = lib/quick_imgui/libImGui.pdb
 
 build lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/backends/imgui_impl_glfw.cpp.o: CXX_COMPILER__ImGui_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui/backends/imgui_impl_glfw.cpp || cmake_object_order_depends_target_ImGui
   DEP_FILE = lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/backends/imgui_impl_glfw.cpp.o.d
@@ -567,8 +530,6 @@ build lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/backends/imgui_impl_glfw.cp
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = lib/quick_imgui/CMakeFiles/ImGui.dir
   OBJECT_FILE_DIR = lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/backends
-  TARGET_COMPILE_PDB = lib/quick_imgui/CMakeFiles/ImGui.dir/ImGui.pdb
-  TARGET_PDB = lib/quick_imgui/libImGui.pdb
 
 build lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/backends/imgui_impl_opengl3.cpp.o: CXX_COMPILER__ImGui_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui/backends/imgui_impl_opengl3.cpp || cmake_object_order_depends_target_ImGui
   DEP_FILE = lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/backends/imgui_impl_opengl3.cpp.o.d
@@ -576,8 +537,6 @@ build lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/backends/imgui_impl_opengl3
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -isystem /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/imgui
   OBJECT_DIR = lib/quick_imgui/CMakeFiles/ImGui.dir
   OBJECT_FILE_DIR = lib/quick_imgui/CMakeFiles/ImGui.dir/lib/imgui/backends
-  TARGET_COMPILE_PDB = lib/quick_imgui/CMakeFiles/ImGui.dir/ImGui.pdb
-  TARGET_PDB = lib/quick_imgui/libImGui.pdb
 
 
 # =============================================================================
@@ -593,9 +552,8 @@ build lib/quick_imgui/libImGui.a: CXX_STATIC_LIBRARY_LINKER__ImGui_Debug lib/qui
   OBJECT_DIR = lib/quick_imgui/CMakeFiles/ImGui.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = lib/quick_imgui/CMakeFiles/ImGui.dir/ImGui.pdb
   TARGET_FILE = lib/quick_imgui/libImGui.a
-  TARGET_PDB = lib/quick_imgui/libImGui.pdb
+  TARGET_PDB = ImGui.a.dbg
 
 
 #############################################
@@ -755,8 +713,6 @@ build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/context.c.o: C_COMPILER__
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src -I/Users/lililica/Desktop/EchecProj-2025/build/lib/quick_imgui/lib/glfw/src
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
 
 build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/init.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_COCOA
@@ -765,8 +721,6 @@ build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glf
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src -I/Users/lililica/Desktop/EchecProj-2025/build/lib/quick_imgui/lib/glfw/src
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
 
 build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/input.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_COCOA
@@ -775,8 +729,6 @@ build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__gl
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src -I/Users/lililica/Desktop/EchecProj-2025/build/lib/quick_imgui/lib/glfw/src
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
 
 build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_COCOA
@@ -785,8 +737,6 @@ build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src -I/Users/lililica/Desktop/EchecProj-2025/build/lib/quick_imgui/lib/glfw/src
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
 
 build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/platform.c.o: C_COMPILER__glfw_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/platform.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_COCOA
@@ -795,8 +745,6 @@ build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/platform.c.o: C_COMPILER_
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src -I/Users/lililica/Desktop/EchecProj-2025/build/lib/quick_imgui/lib/glfw/src
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
 
 build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o: C_COMPILER__glfw_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/vulkan.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_COCOA
@@ -805,8 +753,6 @@ build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o: C_COMPILER__g
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src -I/Users/lililica/Desktop/EchecProj-2025/build/lib/quick_imgui/lib/glfw/src
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
 
 build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/window.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_COCOA
@@ -815,8 +761,6 @@ build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__g
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src -I/Users/lililica/Desktop/EchecProj-2025/build/lib/quick_imgui/lib/glfw/src
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
 
 build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o: C_COMPILER__glfw_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/egl_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_COCOA
@@ -825,8 +769,6 @@ build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o: C_COMPIL
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src -I/Users/lililica/Desktop/EchecProj-2025/build/lib/quick_imgui/lib/glfw/src
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
 
 build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COMPILER__glfw_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/osmesa_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_COCOA
@@ -835,8 +777,6 @@ build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COM
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src -I/Users/lililica/Desktop/EchecProj-2025/build/lib/quick_imgui/lib/glfw/src
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
 
 build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/null_init.c.o: C_COMPILER__glfw_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/null_init.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_COCOA
@@ -845,8 +785,6 @@ build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/null_init.c.o: C_COMPILER
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src -I/Users/lililica/Desktop/EchecProj-2025/build/lib/quick_imgui/lib/glfw/src
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
 
 build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o: C_COMPILER__glfw_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/null_monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_COCOA
@@ -855,8 +793,6 @@ build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o: C_COMPI
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src -I/Users/lililica/Desktop/EchecProj-2025/build/lib/quick_imgui/lib/glfw/src
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
 
 build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/null_window.c.o: C_COMPILER__glfw_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/null_window.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_COCOA
@@ -865,8 +801,6 @@ build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/null_window.c.o: C_COMPIL
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src -I/Users/lililica/Desktop/EchecProj-2025/build/lib/quick_imgui/lib/glfw/src
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
 
 build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o: C_COMPILER__glfw_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/null_joystick.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_COCOA
@@ -875,8 +809,6 @@ build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o: C_COMP
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src -I/Users/lililica/Desktop/EchecProj-2025/build/lib/quick_imgui/lib/glfw/src
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
 
 build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o: C_COMPILER__glfw_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/cocoa_time.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_COCOA
@@ -885,8 +817,6 @@ build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o: C_COMPILE
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src -I/Users/lililica/Desktop/EchecProj-2025/build/lib/quick_imgui/lib/glfw/src
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
 
 build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o: C_COMPILER__glfw_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/posix_module.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_COCOA
@@ -895,8 +825,6 @@ build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o: C_COMPI
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src -I/Users/lililica/Desktop/EchecProj-2025/build/lib/quick_imgui/lib/glfw/src
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
 
 build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o: C_COMPILER__glfw_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/posix_thread.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_COCOA
@@ -905,8 +833,6 @@ build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o: C_COMPI
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src -I/Users/lililica/Desktop/EchecProj-2025/build/lib/quick_imgui/lib/glfw/src
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
 
 build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o: OBJC_COMPILER__glfw_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/cocoa_init.m || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_COCOA
@@ -915,8 +841,6 @@ build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o: OBJC_COMP
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src -I/Users/lililica/Desktop/EchecProj-2025/build/lib/quick_imgui/lib/glfw/src
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
 
 build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o: OBJC_COMPILER__glfw_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/cocoa_joystick.m || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_COCOA
@@ -925,8 +849,6 @@ build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o: OBJC_
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src -I/Users/lililica/Desktop/EchecProj-2025/build/lib/quick_imgui/lib/glfw/src
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
 
 build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o: OBJC_COMPILER__glfw_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/cocoa_monitor.m || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_COCOA
@@ -935,8 +857,6 @@ build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o: OBJC_C
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src -I/Users/lililica/Desktop/EchecProj-2025/build/lib/quick_imgui/lib/glfw/src
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
 
 build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o: OBJC_COMPILER__glfw_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/cocoa_window.m || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_COCOA
@@ -945,8 +865,6 @@ build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o: OBJC_CO
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src -I/Users/lililica/Desktop/EchecProj-2025/build/lib/quick_imgui/lib/glfw/src
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
 
 build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o: OBJC_COMPILER__glfw_unscanned_Debug /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/nsgl_context.m || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_COCOA
@@ -955,8 +873,6 @@ build lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o: OBJC_CO
   INCLUDES = -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/include -I/Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src -I/Users/lililica/Desktop/EchecProj-2025/build/lib/quick_imgui/lib/glfw/src
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
 
 
 # =============================================================================
@@ -972,9 +888,8 @@ build lib/quick_imgui/lib/glfw/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_Deb
   OBJECT_DIR = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = lib/quick_imgui/lib/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_FILE = lib/quick_imgui/lib/glfw/src/libglfw3.a
-  TARGET_PDB = lib/quick_imgui/lib/glfw/src/libglfw3.pdb
+  TARGET_PDB = glfw3.a.dbg
 
 
 #############################################
@@ -1302,14 +1217,14 @@ build /Users/lililica/Desktop/EchecProj-2025/build/CMakeFiles/cmake.verify_globs
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE /Users/lililica/Desktop/EchecProj-2025/build/CMakeFiles/cmake.verify_globs | /Applications/CMake.app/Contents/share/cmake-3.31/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCCompiler.cmake.in /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCCompilerABI.c /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCXXCompiler.cmake.in /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCompilerIdDetection.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeDependentOption.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeDetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeDetermineCompilerSupport.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeDetermineOBJCCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeFindBinUtils.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeNinjaFindMake.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeOBJCCompiler.cmake.in /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeOBJCCompilerABI.m /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeOBJCInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakePackageConfigHelpers.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeSystem.cmake.in /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeTestCompilerCommon.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeTestOBJCCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CheckIncludeFile.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CheckLibraryExists.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/AppleClang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Clang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/CrayClang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/GNU.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/OrangeC-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/TIClang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Tasking-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/FindPackageMessage.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/FindThreads.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/GNUInstallDirs.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CMakeOBJCLinkerInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/FeatureTesting.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Linker/AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Linker/AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Linker/AppleClang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Linker/AppleClang.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-AppleClang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-Clang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-Clang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Darwin-Determine-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Darwin-Initialize.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Darwin.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/UnixPaths.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/WriteBasicConfigVersionFile.cmake /Users/lililica/Desktop/EchecProj-2025/CMakeLists.txt /Users/lililica/Desktop/EchecProj-2025/build/CMakeFiles/VerifyGlobs.cmake /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/CMakeLists.txt /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/CMake/glfw3.pc.in /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/CMake/glfw3Config.cmake.in /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/CMakeLists.txt /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/CMakeLists.txt /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm/CMakeLists.txt /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm/cmake/cmake_uninstall.cmake.in /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm/glm/CMakeLists.txt CMakeCache.txt CMakeFiles/3.31.0-rc1/CMakeCCompiler.cmake CMakeFiles/3.31.0-rc1/CMakeCXXCompiler.cmake CMakeFiles/3.31.0-rc1/CMakeOBJCCompiler.cmake CMakeFiles/3.31.0-rc1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE /Users/lililica/Desktop/EchecProj-2025/build/CMakeFiles/cmake.verify_globs | /Applications/CMake.app/Contents/share/cmake-3.31/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeDependentOption.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeOBJCInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakePackageConfigHelpers.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CheckIncludeFile.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CheckLibraryExists.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/AppleClang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Clang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/GNU.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/FindPackageMessage.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/FindThreads.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/GNUInstallDirs.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CMakeOBJCLinkerInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Linker/AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Linker/AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Linker/AppleClang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Linker/AppleClang.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-AppleClang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-Clang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-Clang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Darwin-Initialize.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Darwin.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/UnixPaths.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/WriteBasicConfigVersionFile.cmake /Users/lililica/Desktop/EchecProj-2025/CMakeLists.txt /Users/lililica/Desktop/EchecProj-2025/build/CMakeFiles/VerifyGlobs.cmake /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/CMakeLists.txt /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/CMake/glfw3.pc.in /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/CMake/glfw3Config.cmake.in /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/CMakeLists.txt /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/CMakeLists.txt /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm/CMakeLists.txt /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm/cmake/cmake_uninstall.cmake.in /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm/glm/CMakeLists.txt CMakeCache.txt CMakeFiles/3.31.0-rc1/CMakeCCompiler.cmake CMakeFiles/3.31.0-rc1/CMakeCXXCompiler.cmake CMakeFiles/3.31.0-rc1/CMakeOBJCCompiler.cmake CMakeFiles/3.31.0-rc1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Applications/CMake.app/Contents/share/cmake-3.31/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCCompiler.cmake.in /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCCompilerABI.c /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCXXCompiler.cmake.in /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCompilerIdDetection.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeDependentOption.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeDetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeDetermineCompilerSupport.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeDetermineOBJCCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeFindBinUtils.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeNinjaFindMake.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeOBJCCompiler.cmake.in /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeOBJCCompilerABI.m /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeOBJCInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakePackageConfigHelpers.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeSystem.cmake.in /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeTestCompilerCommon.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeTestOBJCCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CheckIncludeFile.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CheckLibraryExists.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/AppleClang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Clang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/CrayClang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/GNU.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/OrangeC-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/TIClang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Tasking-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/FindPackageMessage.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/FindThreads.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/GNUInstallDirs.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CMakeOBJCLinkerInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/FeatureTesting.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Linker/AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Linker/AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Linker/AppleClang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Linker/AppleClang.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-AppleClang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-Clang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-Clang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Darwin-Determine-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Darwin-Initialize.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Darwin.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/UnixPaths.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/WriteBasicConfigVersionFile.cmake /Users/lililica/Desktop/EchecProj-2025/CMakeLists.txt /Users/lililica/Desktop/EchecProj-2025/build/CMakeFiles/VerifyGlobs.cmake /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/CMakeLists.txt /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/CMake/glfw3.pc.in /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/CMake/glfw3Config.cmake.in /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/CMakeLists.txt /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/CMakeLists.txt /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm/CMakeLists.txt /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm/cmake/cmake_uninstall.cmake.in /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm/glm/CMakeLists.txt CMakeCache.txt CMakeFiles/3.31.0-rc1/CMakeCCompiler.cmake CMakeFiles/3.31.0-rc1/CMakeCXXCompiler.cmake CMakeFiles/3.31.0-rc1/CMakeOBJCCompiler.cmake CMakeFiles/3.31.0-rc1/CMakeSystem.cmake: phony
+build /Applications/CMake.app/Contents/share/cmake-3.31/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeDependentOption.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeOBJCInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakePackageConfigHelpers.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CheckIncludeFile.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/CheckLibraryExists.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/AppleClang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Clang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/GNU.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/FindPackageMessage.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/FindThreads.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/GNUInstallDirs.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CMakeOBJCLinkerInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Linker/AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Linker/AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Linker/AppleClang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Linker/AppleClang.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-AppleClang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-Clang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-Clang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Apple-Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Darwin-Initialize.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Darwin.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang-OBJC.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/Linker/Apple-AppleClang.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/Platform/UnixPaths.cmake /Applications/CMake.app/Contents/share/cmake-3.31/Modules/WriteBasicConfigVersionFile.cmake /Users/lililica/Desktop/EchecProj-2025/CMakeLists.txt /Users/lililica/Desktop/EchecProj-2025/build/CMakeFiles/VerifyGlobs.cmake /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/CMakeLists.txt /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/CMake/glfw3.pc.in /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/CMake/glfw3Config.cmake.in /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/CMakeLists.txt /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glfw/src/CMakeLists.txt /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm/CMakeLists.txt /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm/cmake/cmake_uninstall.cmake.in /Users/lililica/Desktop/EchecProj-2025/lib/quick_imgui/lib/glm/glm/CMakeLists.txt CMakeCache.txt CMakeFiles/3.31.0-rc1/CMakeCCompiler.cmake CMakeFiles/3.31.0-rc1/CMakeCXXCompiler.cmake CMakeFiles/3.31.0-rc1/CMakeOBJCCompiler.cmake CMakeFiles/3.31.0-rc1/CMakeSystem.cmake: phony
 
 
 #############################################

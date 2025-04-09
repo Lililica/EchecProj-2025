@@ -45,3 +45,6 @@ target_include_directories(${PROJECT_NAME} PRIVATE src)
 # Add quick-imgui library
 add_subdirectory(lib/quick_imgui)
 target_link_libraries(${PROJECT_NAME} PRIVATE quick_imgui::quick_imgui)
+
+target_compile_definitions(${PROJECT_NAME} PUBLIC ASSETS_PATH="../../assets/")
+target_compile_definitions(${PROJECT_NAME} PUBLIC SHADERS_PATH="../../src/shaders/")
