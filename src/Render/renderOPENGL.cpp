@@ -23,6 +23,12 @@ void RenderOpenGL::init() {
   // Initialize the skybox
   skybox.init_Vertex();
   skybox.init_Texture();
+
+  // Initialize the random device
+  randomDevice.init(static_cast<unsigned int>(time(nullptr)));
+  for (int i = 0; i < 20; ++i) {
+    meteorites.push_back(std::nullopt);
+  }
 }
 
 void RenderOpenGL::init_object() {
@@ -42,6 +48,8 @@ void RenderOpenGL::init_object() {
                                           ASSETS_PATH "obj/Knight.obj");
   objects[ObjectType::Case].obj_loader(ASSETS_PATH "texture/image.png",
                                        ASSETS_PATH "obj/case.obj");
+  objects[ObjectType::Meteorite].obj_loader(ASSETS_PATH "texture/Asteroid.png",
+                                            ASSETS_PATH "obj/Asteroid.obj");
 }
 
 void RenderOpenGL::draw_content(Game *&currentGame) {

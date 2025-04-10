@@ -1,12 +1,17 @@
 #include "glm/ext/matrix_transform.hpp"
 #include "glm/gtc/type_ptr.hpp"
 #include "renderOPENGL.hpp"
+#include <optional>
 
 void RenderOpenGL::draw_game(Game *&currentGame) {
 
   // Game section
 
   draw_board();
+
+  for (std::optional<RandomMeteorite> &meteorite : meteorites) {
+    draw_meteorites(meteorite);
+  }
 
   for (int y{0}; y < currentGame->getGridSize(); ++y) {
     for (int x{0}; x < currentGame->getGridSize(); ++x) {
@@ -188,4 +193,92 @@ void RenderOpenGL::draw_board() {
   glDrawArrays(GL_TRIANGLES, 0, objects[ObjectType::Case].getVAO()->getSize());
   glBindTexture(GL_TEXTURE_2D, 0);
   glBindVertexArray(0);
+}
+
+void RenderOpenGL::draw_meteorites(std::optional<RandomMeteorite> &meteorite) {
+
+  // Generate random meteorites
+  if (!meteorite.has_value()) {
+    meteorite = RandomMeteorite{};
+    meteorite->up = randomDevice.randomIntUniforme(0, 1);
+    meteorite->x = randomDevice.randomIntUniforme(-200, 200);
+    meteorite->up ? meteorite->y = 200 : meteorite->y = -200;
+    meteorite->z = randomDevice.randomIntUniforme(-200, 200);
+    meteorite->scale = (randomDevice.randomDouble() * 10) + 5;
+    meteorite->speed = randomDevice.randomDouble();
+
+    meteorite->rotationX = randomDevice.randomDouble() * 2 * 3.14;
+    meteorite->rotationSpeedX = randomDevice.randomDouble() * 0.05;
+
+    meteorite->rotationY = randomDevice.randomDouble() * 2 * 3.14;
+    meteorite->rotationSpeedY = randomDevice.randomDouble() * 0.05;
+
+    meteorite->rotationZ = randomDevice.randomDouble() * 2 * 3.14;
+    meteorite->rotationSpeedZ = randomDevice.randomDouble() * 0.05;
+  }
+  if (meteorite.has_value()) {
+    meteorite->y -= meteorite->up ? meteorite->speed : -meteorite->speed;
+    meteorite->rotationX += meteorite->rotationSpeedX;
+    meteorite->rotationY += meteorite->rotationSpeedY;
+    meteorite->rotationZ += meteorite->rotationSpeedZ;
+  }
+  if (meteorite->y < -200) {
+    meteorite.reset();
+  }
+
+  MVMatrix =
+      glm::translate(glm::mat4(1), glm::vec3(meteorite->x, meteorite->y,
+                                             meteorite->z)); // Translation
+  MVMatrix = glm::scale(MVMatrix, glm::vec3(meteorite->scale, meteorite->scale,
+                                            meteorite->scale));
+  MVMatrix = glm::rotate(MVMatrix, meteorite->rotationX,
+                         glm::vec3(0, 1, 0)); // Rotation
+  MVMatrix = glm::rotate(MVMatrix, meteorite->rotationY,
+                         glm::vec3(1, 0, 0)); // Rotation
+  MVMatrix = glm::rotate(MVMatrix, meteorite->rotationZ,
+                         glm::vec3(0, 0, 1)); // Rotation
+  NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
+  MVP = ProjMatrix * trackball.getViewMatrix() * MVMatrix;
+
+  glUniformMatrix4fv(
+      glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
+                           "uMVPMatrix"),
+      1, GL_FALSE, glm::value_ptr(MVP));
+  glUniformMatrix4fv(
+      glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
+                           "uMVMatrix"),
+      1, GL_FALSE, glm::value_ptr(MVMatrix));
+  glUniformMatrix4fv(
+      glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
+                           "uNormalMatrix"),
+      1, GL_FALSE, glm::value_ptr(NormalMatrix));
+  glUniform4fv(
+      glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
+                           "uColor"),
+      1, glm::value_ptr(Color));
+  glUniform1i(
+      glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
+                           "uTexture"),
+      0);
+  glUniform1i(
+      glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
+                           "isTexture"),
+      1);
+  glUniform1i(
+      glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
+                           "isMeteor"),
+      1);
+
+  glBindVertexArray(objects[ObjectType::Meteorite].getVAO()->getGLuint());
+  glBindTexture(GL_TEXTURE_2D,
+                objects[ObjectType::Meteorite].getTexture()->getTexture());
+  glDrawArrays(GL_TRIANGLES, 0,
+               objects[ObjectType::Meteorite].getVAO()->getSize());
+  glBindTexture(GL_TEXTURE_2D, 0);
+  glBindVertexArray(0);
+
+  glUniform1i(
+      glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
+                           "isMeteor"),
+      0);
 }

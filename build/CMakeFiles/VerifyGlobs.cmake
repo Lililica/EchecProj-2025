@@ -27,6 +27,8 @@ set(OLD_GLOB
   "/Users/lililica/Desktop/EchecProj-2025/src/Game/gameClassic.cpp"
   "/Users/lililica/Desktop/EchecProj-2025/src/Game/gameClassic.hpp"
   "/Users/lililica/Desktop/EchecProj-2025/src/Game/game_utils.cpp"
+  "/Users/lililica/Desktop/EchecProj-2025/src/Maths/myRandom.cpp"
+  "/Users/lililica/Desktop/EchecProj-2025/src/Maths/myRandom.hpp"
   "/Users/lililica/Desktop/EchecProj-2025/src/Menu/MenuList/menuHome.cpp"
   "/Users/lililica/Desktop/EchecProj-2025/src/Menu/MenuList/menuHome.hpp"
   "/Users/lililica/Desktop/EchecProj-2025/src/Menu/MenuList/menuInGame.cpp"

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Game/game.hpp"
+#include "Maths/myRandom.hpp"
 #include "OpenGLutils/object/object.hpp"
 #include "OpenGLutils/utils.hpp"
 #include "Render/OpenGLutils/skybox.hpp"
@@ -10,9 +11,10 @@
 #include "glm/ext/matrix_transform.hpp"
 #include "shaders/ShaderReader.hpp"
 #include <glm/glm.hpp>
+#include <optional>
 #include <vector>
 
-enum ObjectType { Case = 6 };
+enum ObjectType { Case = 6, Meteorite = 7 };
 
 enum ShaderIndices {
   ShaderObj = 0,
@@ -28,10 +30,28 @@ struct GameDisplayInformation {
   float scalePiece = 0.3f;
 };
 
+struct RandomMeteorite {
+  bool up;
+  float x;
+  float y;
+  float z;
+  float scale;
+  float speed = 0.1f;
+  float rotationX = 0.f;
+  float rotationSpeedX = 0.1f;
+  float rotationY = 0.f;
+  float rotationSpeedY = 0.1f;
+  float rotationZ = 0.f;
+  float rotationSpeedZ = 0.1f;
+};
+
 class RenderOpenGL {
 private:
   OpenGL_Manager manager;
   Skybox skybox;
+
+  RandomDevice randomDevice;
+  std::vector<std::optional<RandomMeteorite>> meteorites;
 
   std::vector<Object> objects;
   std::vector<ShaderLoader> shaders;
@@ -59,6 +79,7 @@ public:
   void draw_cases(Game *&currentGame, int x, int y);
   void draw_pieces(Game *&currentGame, int x, int y);
   void draw_board();
+  void draw_meteorites(std::optional<RandomMeteorite> &meteorite);
 
   // Shader loading
   void init_shaders();
