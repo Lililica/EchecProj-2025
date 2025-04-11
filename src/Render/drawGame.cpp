@@ -282,3 +282,36 @@ void RenderOpenGL::draw_meteorites(std::optional<RandomMeteorite> &meteorite) {
                            "isMeteor"),
       0);
 }
+
+void RenderOpenGL::draw_skybox() {
+  manager.setShaderLoader(&shaders[ShaderIndices::ShaderSkybox]);
+  manager.getShaderLoader()->useProgram();
+
+  glDepthFunc(GL_LEQUAL);
+  glDepthMask(GL_FALSE);
+
+  glm::mat4 view = glm::mat4(
+      glm::mat3(glm::lookAt(glm::normalize(trackball.getPosition()),
+                            glm::vec3(0., 0., 0.), glm::vec3(0, 1, 0))));
+
+  glUniform1i(glGetUniformLocation(
+                  manager.getShaderLoader()->getProgram()->getGLId(), "skybox"),
+              0);
+  glUniformMatrix4fv(
+      glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
+                           "view"),
+      1, GL_FALSE, glm::value_ptr(view));
+  glUniformMatrix4fv(
+      glGetUniformLocation(manager.getShaderLoader()->getProgram()->getGLId(),
+                           "projection"),
+      1, GL_FALSE, glm::value_ptr(ProjMatrix));
+
+  glBindVertexArray(skybox.getSkyboxVAO());
+  glBindTexture(GL_TEXTURE_CUBE_MAP, skybox.getSkyboxTexture());
+  glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
+  glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
+  glBindVertexArray(0);
+
+  glDepthMask(GL_TRUE);
+  glDepthFunc(GL_LESS);
+}

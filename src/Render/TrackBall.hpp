@@ -1,6 +1,7 @@
 #pragma once
 
 #include "glm/ext/matrix_float4x4.hpp"
+#include "glm/trigonometric.hpp"
 
 class TrackballCamera {
 private:
@@ -30,4 +31,9 @@ public:
 
   glm::mat4 getViewMatrix() const;
   glm::vec3 getPosition() const;
+  void set_to(glm::vec3 pos) {
+    m_fDistance = glm::length(pos);
+    m_fAngleX = glm::degrees(asin(pos.y / m_fDistance));
+    m_fAngleY = glm::degrees(atan2(pos.z, pos.x));
+  };
 };

@@ -9,6 +9,7 @@
 #include "Render/mouseCasting.hpp"
 #include "glm/ext/matrix_clip_space.hpp"
 #include "glm/ext/matrix_transform.hpp"
+#include "glm/ext/vector_float3.hpp"
 #include "shaders/ShaderReader.hpp"
 #include <glm/glm.hpp>
 #include <optional>
@@ -71,11 +72,15 @@ public:
   void init();
   void draw_content(Game *&currentGame);
   void button_action();
+
+  // Mouse section
   void mouse_action(Game *&currentGame);
+  void calcul_mouse_collision_hover(Game *&currentGame);
+  void select_case_with_mouse(Game *&currentGame);
 
   // Drawing Game and Objects
   void draw_game(Game *&currentGame);
-
+  void draw_skybox();
   void draw_cases(Game *&currentGame, int x, int y);
   void draw_pieces(Game *&currentGame, int x, int y);
   void draw_board();
@@ -97,6 +102,7 @@ public:
     NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
     MVP = ProjMatrix * MVMatrix * trackball.getViewMatrix();
   }
+  void manageFirstView(Game *&currentGame);
 
   OpenGL_Manager *getManager() { return &manager; }
 };

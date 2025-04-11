@@ -1,9 +1,6 @@
 #include "Render/OpenGLutils/object/object.hpp"
 #include "Render/OpenGLutils/utils.hpp"
-#include "shaders/ShaderReader.hpp"
-#include <vector>
 #define GL_SILENCE_DEPRECATION
-#include "MyLibs/glimac/FilePath.hpp"
 #include "app.hpp"
 #include <OpenGL/gl.h>
 #include <backends/imgui_impl_glfw.h>
@@ -30,14 +27,10 @@ int main(int argc, char **argv) {
   ImGui::CreateContext();
   ImGuiIO &io = ImGui::GetIO();
 
-  mainApp.set_chess_font(
-      io.Fonts->AddFontFromFileTTF("/Users/lililica/Documents/IMAC/Semestre4/"
-                                   "EchecProj-2025/assets/font/CHEQ_TT.TTF",
-                                   30.f));
+  mainApp.init_font(
+      io.Fonts->AddFontFromFileTTF(ASSETS_PATH "font/CHEQ_TT.TTF", 30.f));
 
   mainApp.setup_app();
-
-  ImFont *basicFont = io.Fonts->AddFontDefault();
 
   mainApp.getManager()->ImGui_init();
 
